@@ -123,32 +123,6 @@ def Trip_rate(k) -> Quantity:
         calculated_value = prev_value * (1 + (growth_rate / 8))
         return calculated_value
 
-    # def calculate_trip_rate(row, growth_rate, prev_value):
-    #     calculated_value = (
-    #         -0.5 * growth_rate + prev_value
-    #         if row["trip_dist"] == "No_travel"
-    #         else -0.25 * growth_rate + prev_value
-    #         if row["trip_dist"] == "00_01"
-    #         else -0.1 * growth_rate + prev_value
-    #         if row["trip_dist"] == "02_05"
-    #         else -0.05 * growth_rate + prev_value
-    #         if row["trip_dist"] == "06_10"
-    #         else 0.25 * growth_rate + prev_value
-    #         if row["trip_dist"] == "11_20"
-    #         else 0.5 * growth_rate + prev_value
-    #         if row["trip_dist"] == "21_30"
-    #         else 1 * growth_rate + prev_value
-    #         if row["trip_dist"] == "31_50"
-    #         else 1.5 * growth_rate + prev_value
-    #         if row["trip_dist"] == "51+"
-    #         else 1
-    #     )  # Condition that if calculated_value is less than zero, then use previous value
-    #     return (
-    #         max(calculated_value, prev_value)
-    #         if calculated_value < 0
-    #         else calculated_value
-    #     )
-
     trip_rate["2030"] = trip_rate.apply(
         lambda row: calculate_trip_rate(
             row,
@@ -293,7 +267,7 @@ def Long_dist_mode(m) -> Quantity:
     long_dist_data = long_dist_data / computations.group_sum(
         group=["n"], sum="mode", qty=long_dist_data
     )
-    m = 1
+
     if m == 1:  # BAU mode shares
         long_dist_data = long_dist_data.expand_dims(
             y={2011: len(long_dist_data)}
@@ -362,123 +336,3 @@ def Long_dist_mode(m) -> Quantity:
         )
 
     return long_dist_modes
-
-
-# ## Long distance travel
-# ##Unit: billion passenger kilometres
-# # Assumption- bus-84% and ldv-16% of road
-# file_path = Path("long_dist.csv")
-# file_path.write_text(
-#     """# Long distance travel by rail and road
-# #
-# #
-# #
-# #
-# n, mode, value
-# India, rail_share, 1150.74
-# India, bus_share, 5477.514
-# India, ldv_share, 1043.336
-# Bangladesh, rail_share, 14.33
-# Bangladesh, bus_share, 88.3008
-# Bangladesh, ldv_share, 16.8192
-# Pakistan, rail_share, 29.6
-# Pakistan, bus_share, 223.7424
-# Pakistan, ldv_share, 42.6176
-# Sri Lanka, rail_share, 7.41
-# Sri Lanka, bus_share, 45.6288
-# Sri Lanka, ldv_share, 8.6912
-# Nepal, bus_share, 24.7884
-# Nepal, ldv_share, 4.7216
-# Bhutan, bus_share, 0.6636
-# Bhutan, ldv_share, 0.1264
-# Afghanistan, bus_share, 23.5452
-# Afghanistan, ldv_share, 4.4848
-# Afghanistan, rail_share, 1.48
-# Maldives, rail_share, 0
-# Maldives, ldv_share, 0
-# Maldives, bus_share, 0
-# Maldives, nmt_share, 0
-# Maldives, ipt_share, 0
-# Maldives, tw_share, 0
-# India, nmt_share, 0
-# India, ipt_share, 0
-# India, tw_share, 0
-# Bangladesh, nmt_share, 0
-# Bangladesh, ipt_share, 0
-# Bangladesh, tw_share, 0
-# Pakistan, nmt_share, 0
-# Pakistan, ipt_share, 0
-# Pakistan, tw_share, 0
-# Sri Lanka, nmt_share, 0
-# Sri Lanka, ipt_share, 0
-# Sri Lanka, tw_share, 0
-# Nepal, nmt_share, 0
-# Nepal, ipt_share, 0
-# Nepal, tw_share, 0
-# Bhutan, nmt_share, 0
-# Bhutan, ipt_share, 0
-# Bhutan, tw_share, 0
-# Afghanistan, nmt_share, 0
-# Afghanistan, ipt_share, 0
-# Afghanistan, tw_share, 0
-
-# """
-# )
-# # ## define trajectories for changes in trip rates for each distance category
-# trip_rate["2030"] = trip_rate.apply(
-#     lambda row: -1 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "No_travel"
-#     else -0.75 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "00_01"
-#     else -0.5 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "02_05"
-#     else -0.25 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "06_10"
-#     else 0.5 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "11_20"
-#     else 1 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "21_30"
-#     else 1.5 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "31_50"
-#     else 2 * s1.loc[s1["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "51+"
-#     else 1,
-#     axis=1,
-# )
-
-# trip_rate["2050"] = trip_rate.apply(
-#     lambda row: -1 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "No_travel"
-#     else -0.75 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "00_01"
-#     else -0.5 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "02_05"
-#     else -0.25 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "06_10"
-#     else 0.5 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "11_20"
-#     else 1 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "21_30"
-#     else 1.5 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "31_50"
-#     else 2 * s2.loc[s2["n"] == row["n"], "value"].values[0] / 8
-#     + row["value"]
-#     if row["trip_dist"] == "51+"
-#     else 1,
-#     axis=1,
-# )
