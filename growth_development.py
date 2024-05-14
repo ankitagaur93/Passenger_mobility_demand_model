@@ -77,13 +77,13 @@ def area_type_share(j) -> Quantity:
     area_share = pd.read_csv("urban_area_type.csv")
 
     ## define future distribution of urbanisation
-    if j == 0:
+    if j == 1:
         future_urb = [
             ["large_city", 0.05, 0.02],
             ["city", -0.025, -0.01],
             ["town", -0.025, -0.01],
         ]
-    if j == 1:
+    if j == 2:
         future_urb = [
             ["large_city", 0.10, 0.07],
             ["city", -0.05, -0.035],

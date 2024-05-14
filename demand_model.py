@@ -25,7 +25,7 @@ base_path = Path.cwd()
 
 # Function that returns daily travel passenger kilometers by mode
 # k : {1,2,3,4,5}- SSP scenario
-# j : {0,1}- type of urbanisation
+# j : {1,2}- type of urbanisation
 # m : {1,2,3}- mode share trajcetory
 
 
