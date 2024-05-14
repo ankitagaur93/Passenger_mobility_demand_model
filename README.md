@@ -18,7 +18,3 @@ The model is developed to project mobility demand for South Asian countries. The
 4. **Transit Oriented Development (TOD)**: Focuses on compact development and slower urbanization.
 5. **Technology Focus (TECH)**: Considers rapid technological advancements and their impacts on mobility.
 
-## Installation
-### Prerequisites
-- Python 3.7+
-
