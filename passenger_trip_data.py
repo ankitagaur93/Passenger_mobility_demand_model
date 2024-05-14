@@ -4,8 +4,8 @@ This module produces passenger trip data which includes:
     - trip distance
     - trip share
     - trip rate (projections for each SSP)
-    - mode share for each distance category
-    - long distance travel by mode
+    - daily travel mode share trajcetories
+    - long distance travel mode share trajcetories
 
 """
 
@@ -64,24 +64,6 @@ trip_dist = computations.interpolate(
     trip_dist, dict(y=list(range(2011, 2101)))
 )
 computations.write_report(trip_dist, Path("trip_distance.csv"))
-
-# Select trip distance to convert to genno
-# trip_dist = demand_model[
-#     ["trip_dist", "Typical distance"]
-# ].drop_duplicates()
-# trip_dist = trip_dist.rename(columns={"Typical distance": "value"})
-# trip_dist = trip_dist.to_csv(index=False, lineterminator="\n")
-# trip_dist = trip_dist.replace(",", ", ")
-
-# data_info = """# Typical trip distance for each distance catgeory
-# #
-# # These are assumed values
-# #
-# #
-# """
-# trip_dist = f"{data_info}{trip_dist}"
-# file_path = Path("trip_distance.csv")
-# file_path.write_text(trip_dist)
 
 
 # # Select trip share for each area type to convert to genno
@@ -367,27 +349,6 @@ def Mode_shares(k, m) -> Quantity:
     rail /= total_share
     ipt /= total_share
 
-    # ldv = ldv.to_dataframe().rename(columns={"value": "LDV"})
-    # nmt = nmt.to_dataframe().rename(columns={"value": "NMT"})
-    # tw = tw.to_dataframe().rename(columns={"value": "2-Wheeler"})
-    # rail = rail.to_dataframe().rename(columns={"value": "Rail"})
-    # bus = bus.to_dataframe().rename(columns={"value": "Bus"})
-    # ipt = ipt.to_dataframe().rename(columns={"value": "IPT"})
-
-    # merged_df = pd.concat(
-    #     [
-    #         ldv["LDV"],
-    #         nmt["NMT"],
-    #         bus["Bus"],
-    #         rail["Rail"],
-
-    #         ipt["IPT"],
-    #         tw["2-Wheeler"],
-
-    #     ],
-    #     axis=1,
-    # )
-
     modes = {}
     mode_share = Key("mode_share", ["mode", "y", "n"])
 
@@ -415,62 +376,6 @@ def Mode_shares(k, m) -> Quantity:
         mode_share = computations.concat(mode_share, modes[i])
 
     return mode_share
-
-
-# # A function that defines mode share trajectories for daily travel
-# def Mode_shares(m) -> Quantity:
-#     modes = {}
-#     new_modes = {}
-#     mode_share = Key("mode_share", ["mode", "y", "n"])
-#     if m == 1:  # BAU mode shares
-#         for i in file_list:
-#             modes[i] = demand_model[["area_type", "trip_dist", f"{i}"]]
-#             modes[i] = modes[i].rename(columns={f"{i}": "value"})
-#             modes[i] = modes[i].to_csv(index=False, lineterminator="\n")
-#             modes[i] = modes[i].replace(",", ", ")
-
-#             file_path = Path(f"{i}_{m}.csv")
-#             file_path.write_text(modes[i])
-#     elif m in {2, 3}:  # m=2: Car-oriented; m=3: Sustainable future
-#         file_name = (
-#             "car_oriented_modeshare.csv"
-#             if m == 2
-#             else "sustainable_modeshare.csv"
-#         )
-#         future_modes = pd.read_csv(file_name)
-
-#         for i in file_list:
-#             modes[i] = demand_model[["area_type", "trip_dist", f"{i}"]]
-#             modes[i]["y"] = 2011
-#             new_modes[i] = future_modes[
-#                 ["area_type", "trip_dist", "y", f"{i}"]
-#             ]
-#             # Concatenate the original dataframe and the new_rows dataframe
-#             modes[i] = pd.concat([modes[i], new_modes[i]])
-#             new_rows = pd.DataFrame(
-#                 [
-#                     (np.nan, np.nan, year, 0)
-#                     for year in list(range(2051, 2101))
-#                 ],
-#                 columns=["area_type", "trip_dist", "y", f"{i}"],
-#             )
-#             modes[i] = pd.concat([modes[i], new_rows]).rename(
-#                 columns={f"{i}": "value"}
-#             )
-#             modes[i] = Quantity(
-#                 modes[i].set_index(["area_type", "trip_dist", "y"])[
-#                     "value"
-#                 ]
-#             )
-#             modes[i] = modes[i].ffill("y")
-#             modes[i] = computations.interpolate(
-#                 modes[i], dict(y=list(range(2011, 2101)))
-#             )
-#             computations.write_report(modes[i], Path(f"{i}_{m}.csv"))
-#             modes[i] = modes[i].expand_dims(mode={f"{i}": len(modes[i])})
-#             mode_share = computations.concat(mode_share, modes[i])
-
-#         return mode_share
 
 
 # A function that defined mode share trajcetories for long distance travel
