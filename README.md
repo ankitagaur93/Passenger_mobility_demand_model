@@ -6,9 +6,9 @@ The model is developed to project mobility demand for South Asian countries. The
 
 ## Core model components
 
-- Phenomena are quatified through a comprehensive literature based evidence, prioritising evidence from global South regions.
-- Model is developed considering data from South Asia and the latest SSPs. 
-- Four alternate passenger mobility scenarios developed 
+- **Phenomena Quantification**: Utilizes comprehensive, literature-based evidence, prioritizing data from Global South regions.
+- **Data Sources**: Developed using data from South Asia and the latest Shared Socioeconomic Pathways (SSPs).
+- **Scenarios**: Includes four alternate passenger mobility scenarios to explore different futures.
 
 ## Scenario description
 
