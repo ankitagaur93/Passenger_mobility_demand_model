@@ -85,9 +85,9 @@ def area_type_share(j) -> Quantity:
         ]
     if j == 1:
         future_urb = [
-            ["large_city", 0.1, 0.05],
-            ["city", -0.05, -0.025],
-            ["town", -0.05, -0.025],
+            ["large_city", 0.10, 0.07],
+            ["city", -0.05, -0.035],
+            ["town", -0.05, -0.035],
         ]
 
     future_urb_df = pd.DataFrame(

@@ -462,11 +462,11 @@ def MAAS(i) -> Quantity:
     """Mobility as a Service-
     representation: Higher vdt due to ride sharing and ride hailing,
                     changes in average LDV occupancy"""
-    maas = 1.25 * RH(i)["vdt"] * RS(i)["vdt"]
+    maas = 1.5 * RH(i)["vdt"] * RS(i)["vdt"]
     maas = maas.expand_dims(parameter={"vdt": len(maas)})
     ldv_occ = (RH(i)["ldv_occ"] + RS(i)["ldv_occ"]) / 2
     ldv_occ = ldv_occ.expand_dims(parameter={"ldv_occ": len(ldv_occ)})
-    ldv_share = 1.25 * RH(1)["ldv_share"] * RS(1)["ldv_share"]
+    ldv_share = 1.5 * RH(1)["ldv_share"] * RS(1)["ldv_share"]
     ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(maas)})
     maas = computations.concat(maas, ldv_occ, ldv_share)
     return maas
@@ -509,16 +509,16 @@ for m in range(1, 4):
         for p_id, flags in (
             ("URB", [False, False, True, False, False]),
             ("AV", [False, False, False, True, False]),
-            ("ENV", [False, False, True, True, False]),
-            ("HSL", [True, True, True, True, False]),
+            ("ENV", [True, False, True, False, False]),
+            ("HSL", [True, True, False, False, False]),
             ("NMT", [True, True, True, False, False]),
-            ("RH", [False, True, False, False, False]),
-            ("RS", [False, True, False, False, False]),
-            ("PT", [True, True, True, True, False]),
-            ("TODU", [True, True, True, False, False]),
+            ("RH", [False, False, False, True, False]),
+            ("RS", [False, True, False, True, False]),
+            ("PT", [True, True, True, False, False]),
+            ("TODU", [False, False, True, False, False]),
             ("ELIFE", [False, False, False, True, False]),
-            ("HSR", [False, True, False, True, False]),
-            ("MAAS", [False, False, True, True, False]),
+            ("HSR", [False, True, False, False, False]),
+            ("MAAS", [False, False, False, True, False]),
         ):
             for flag, scen in zip(flags, [NP, BP, TOD, TECH, Base]):
                 scen.flags(p_id, flag)
@@ -550,13 +550,12 @@ for m in range(1, 4):
                 bus_share = value.get(
                     "bus_share", 1.0
                 )  # Non-default for RH
+                ldv_occ = value.get("ldv_occ", 2.1)
                 tw_share = value.get(
                     "tw_share", 1.0
                 )  # Non-default for NMT, PT
                 # NB not currently used
-                ldv_occ = value.get(
-                    "ldv_occ", 2.1
-                )  # Non-default for RS, RH
+                # Non-default for RS, RH
                 ev_share = value.get("ev_share", 1)  # Non-default for ENV
                 ldv_own = value.get(
                     "ldv_own", 1
@@ -612,6 +611,7 @@ for m in range(1, 4):
                 )
 
             total_pdt = computations.concat(daily_travel_pdt, ldt * 1000)
+            total_pdt = total_pdt.drop_duplicates()
 
             computations.write_report(
                 total_pdt, f"total_pdt_{scen.name}_{j}_{m}.csv"

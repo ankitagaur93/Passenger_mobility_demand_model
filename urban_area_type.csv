@@ -1,6 +1,6 @@
 Country,area_type,2011
 Afghanistan,city,0.3059
-Bangladesh,city,0.3011
+Bangladesh,city,0.3
 Bhutan,city,0.33
 India,city,0.2309
 Maldives,city,0.14
@@ -8,7 +8,7 @@ Nepal,city,0.3123
 Pakistan,city,0.332
 Sri Lanka,city,0.495
 Afghanistan,large_city,0.57
-Bangladesh,large_city,0.3413
+Bangladesh,large_city,0.34
 Bhutan,large_city,0.414
 India,large_city,0.4262
 Maldives,large_city,0.474
@@ -16,7 +16,7 @@ Nepal,large_city,0.4164
 Pakistan,large_city,0.5427
 Sri Lanka,large_city,0.203
 Afghanistan,town,0.1241
-Bangladesh,town,0.387
+Bangladesh,town,0.36
 Bhutan,town,0.256
 India,town,0.3386
 Maldives,town,0.386

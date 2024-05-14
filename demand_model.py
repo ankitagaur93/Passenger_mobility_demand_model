@@ -17,7 +17,7 @@ Depdendent on:
 
 from genno import computations, Quantity, Key
 from pathlib import Path
-from growth_development import pop_area_type, gdp_cap
+from growth_development import pop_area_type, gdp_cap, pop
 from passenger_trip_data import Mode_shares, Trip_rate, Long_dist_mode
 
 # Specifiying base path for stored files
@@ -30,15 +30,15 @@ base_path = Path.cwd()
 
 
 def Daily_travel(k, j, m) -> Quantity:
-    Mode_shares(m)
+    Mode_shares(k, m)
     Trip_rate(k)
     data_files = [
-        f"ipt_share_{m}.csv",
-        f"tw_share_{m}.csv",
-        f"bus_share_{m}.csv",
-        f"ldv_share_{m}.csv",
-        f"nmt_share_{m}.csv",
-        f"rail_share_{m}.csv",
+        f"ipt_share_{m}_{k}.csv",
+        f"tw_share_{m}_{k}.csv",
+        f"bus_share_{m}_{k}.csv",
+        f"ldv_share_{m}_{k}.csv",
+        f"nmt_share_{m}_{k}.csv",
+        f"rail_share_{m}_{k}.csv",
         "trip_distance.csv",
         f"trip_rate_{k}.csv",
         "trip_share.csv",
@@ -47,7 +47,7 @@ def Daily_travel(k, j, m) -> Quantity:
     ## setting up path objects
     path_objs = [base_path / filename for filename in data_files]
     csv_names = [
-        i.stem.replace(f"_{m}", "")
+        i.stem.replace(f"_{m}_{k}", "")
         if "trip_rate" not in i.stem or m != 2
         else i.stem
         for i in path_objs
@@ -94,7 +94,7 @@ def Daily_travel(k, j, m) -> Quantity:
         )
 
     computations.write_report(
-        daily_travel_pdt, Path(f"daily_travel_{k}_{j}_{m}.csv")
+        daily_travel_pdt, Path(f"daily_travel_{k}_{j}_{m}_new.csv")
     )
 
     return daily_travel
@@ -106,11 +106,11 @@ def Daily_travel(k, j, m) -> Quantity:
 
 
 def Long_dist_travel(k, m) -> Quantity:
-    Long_dist_mode(m)
+    Long_dist_mode(k, m)
     long_dist_pkm = computations.load_file(Path("long_dist_pkm.csv"))
     long_dist_pkm = long_dist_pkm.expand_dims(y={2011: len(long_dist_pkm)})
     long_dist_mode = computations.load_file(
-        Path(f"long_dist_modes_{m}.csv")
+        Path(f"long_dist_modes_{k}_{m}.csv")
     )
 
     # index GDP per cap to 2011 (SSP scenario "k")
@@ -125,8 +125,8 @@ def Long_dist_travel(k, m) -> Quantity:
     # -c is share of rail in long distance pkm
     for country, a, b, c in zip(
         countries,
-        [242717, 3999, 11136, 11753],
-        [789761, 3974, 8075, -7314],
+        [242717, 3999, 11136, 7449],
+        [789761, 3974, 8075, -2441],
         [0.15, 0.12, 0.1, 0.12],
     ):
         eq = (
@@ -173,3 +173,156 @@ def Long_dist_travel(k, m) -> Quantity:
     )
 
     return long_dist_travel, long_dist_mode
+
+
+# # Set SSP scenario- check passenger_trip_data.py for k
+# k = 2
+
+# # Set urbanisation type- check area_type_share(j) in growth_development.py
+# j = 0
+
+
+# # Set the mode share trajectory- check passenger_trip_data.py for m
+# m = 1
+# # Call the function that generates mode shares for different m's
+# Mode_shares(m)
+
+# # CSV data files to be read
+# data_files = [
+#     f"ipt_share_{m}.csv",
+#     f"tw_share_{m}.csv",
+#     f"bus_share_{m}.csv",
+#     f"ldv_share_{m}.csv",
+#     f"nmt_share_{m}.csv",
+#     f"rail_share_{m}.csv",
+#     "trip_distance.csv",
+#     "trip_rate.csv",
+#     "trip_share.csv",
+# ]
+
+
+# ## setting up path objects
+# path_objs = [base_path / filename for filename in data_files]
+# csv_names = [i.stem.replace(f"_{m}", "") for i in path_objs]
+
+# ## gathers all trip data needed to calculate per capita values
+# trip_data = {}
+# for path, name in zip(path_objs, csv_names):
+#     trip_data[name] = computations.load_file(path)
+
+# ## pc_dt is a dictionary containing per capita daily distance travelled by mode for
+# ## each distance category and area_type
+# pc_dt = {}
+# total_pdt_dt = 0
+# mode_share = Key(
+#     "mode_share", ["mode", "y", "n"]
+# )  # create a quantity to concat later
+# pdt_mode_at = Key("pdt_mode_at", ["mode", "area_type", "y", "n"])
+
+# for i in [
+#     "ldv_share",
+#     "ipt_share",
+#     "tw_share",
+#     "bus_share",
+#     "nmt_share",
+#     "rail_share",
+# ]:
+#     pc_dt[i] = computations.mul(
+#         trip_data[f"{i}"],
+#         trip_data["trip_share"],
+#         trip_data["trip_distance"],
+#         trip_data["trip_rate"],
+#     )
+#     # - Convert daily commute to annual total travel
+#     # - multiplying by 260- no. of working days in a year
+#     # - Commute accounts for 28.74%- find total passenger distance in km (daily)
+#     pc_dt[i] = pc_dt[i] * 260 / 0.2874
+
+#     ## multiply by population
+#     pc_dt[i] = pc_dt[i] * pop_area_type(k, j)
+
+#     # Calculate total passenger distance travelled (million pkm)
+#     total_pdt_dt += pc_dt[i]
+#     # Calculate mode share
+#     # - expand dimensions to include mode
+#     # - sum by "trip_dist" and "area_type"
+#     pdt_mode = pc_dt[i].expand_dims(mode={f"{i}": len(pc_dt[i])})
+#     pdt_mode = computations.group_sum(
+#         group=["y"], sum="trip_dist", qty=pdt_mode
+#     )
+#     # PDT by mode for each area type
+#     pdt_mode_at = computations.concat(pdt_mode_at, pdt_mode)
+
+#     pdt_mode = computations.group_sum(
+#         group=["y"], sum="area_type", qty=pdt_mode
+#     )
+#     # concat all values
+#     mode_share = computations.concat(mode_share, pdt_mode)
+
+
+# # billion pkm
+# mode_pdt = mode_share / 10**3
+
+# # Calculate mode shares
+# mode_share = mode_share / computations.group_sum(
+#     group=["y"], sum="mode", qty=mode_share
+# )
+# computations.write_report(mode_share, Path("mode_shares.csv"))
+
+
+# # Sum across trip_dist for total pdt by area type
+# total_pdt_dt = computations.group_sum(
+#     group=["y"], sum="trip_dist", qty=total_pdt_dt
+# )
+
+
+# # Calculate per capita pdt for all area types
+# per_cap_daily = total_pdt_dt / pop_area_type(k, j)
+
+# # Calculate total pdt in billion pkm
+# total_pdt_dt = (
+#     computations.group_sum(group=["y"], sum="area_type", qty=total_pdt_dt)
+#     / 10**3
+# )
+
+# per_capita_national = (total_pdt_dt * 1000 / pop(k)).expand_dims(
+#     area_type={"National avg.": len(total_pdt_dt)}
+# )
+# per_cap_daily = computations.concat(per_cap_daily, per_capita_national)
+# computations.write_report(per_cap_daily, Path("pdt_cap_dt.csv"))
+
+
+# # long-distance travel growth
+# long_dist_path = Path("long_dist.csv")
+# long_dist_travel = computations.load_file(long_dist_path)
+
+# # index GDP per cap to 2011 (SSP scenario "k")
+# gdp_cap_index = computations.index_to(gdp_cap(k), dim_or_selector="y")
+
+# ## Total long distance travel in billion passenger kilometers- by rail and road
+# long_dist_travel = computations.mul(long_dist_travel, gdp_cap_index)
+
+# ## long distance travel by mode
+# ldt_mode = long_dist_travel / computations.group_sum(
+#     group=["y"], sum="mode", qty=long_dist_travel
+# )
+
+# # Total annual passenger kilometres (in billion) by mode in South Asia
+# total_passenger_dist_mode = long_dist_travel + mode_pdt
+# computations.write_report(
+#     total_passenger_dist_mode, Path("mode_share_total.csv")
+# )
+
+# total_mode_share = total_passenger_dist_mode / computations.group_sum(
+#     group=["y"], sum="mode", qty=total_passenger_dist_mode
+# )
+
+# total_passenger_dist = computations.group_sum(
+#     group=["y"], sum="mode", qty=total_passenger_dist_mode
+# )
+
+# # Per capita passenger kilometres
+
+# per_cap_dist = total_passenger_dist * 1000 / pop(k)
+
+# computations.write_report(per_cap_dist, Path("pdt_cap.csv"))
