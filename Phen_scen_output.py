@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-This module handles the definition and modelling of each phenomenon 
-and all the scenarios. 
+This module handles the definition and modelling of each phenomenon
+and all the scenarios.
 
-It produces pdt by mode for each scenario, 
+It produces pdt by mode for each scenario,
 and other MESSAGEix-Transport parameters.
 
 Alternate outcomes for each phenomenon can be defined within functions
@@ -12,7 +12,7 @@ Alternate outcomes for each phenomenon can be defined within functions
 import os
 import numpy as np
 import pandas as pd
-from demand_model import Daily_travel, Long_dist_travel
+from demand_model import Daily_travel
 from genno import Quantity, computations, Key
 
 os.getcwd()
@@ -75,9 +75,7 @@ def AV(i) -> Quantity:
     av = phen_setting["AV"].drop("trip_dist") + 1
     occ_av = 1.5  # assumtpion
     ldv_share = av["vdt"] * occ_av  # calculate pdt
-    ldv_share = ldv_share.expand_dims(
-        parameter={"ldv_share": len(ldv_share)}
-    )
+    ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(ldv_share)})
     av = computations.concat(av, ldv_share)
     return av
 
@@ -96,93 +94,96 @@ def ENV(i) -> Quantity:
     return env
 
 
-def HSR(i, m) -> Quantity:
-    """High speed rail-
-    representation: mode shift to rail in long distance travel"""
-    long_dist_travel, ldt_mode = Long_dist_travel(2, m)
-    # ldt_mode = ldt_mode.expand_dims(y={2011: len(ldt_mode)})
-    hsr = ldt_mode[
-        (ldt_mode.index.get_level_values("mode") == "rail_share")
-        & (ldt_mode.index.get_level_values("y") == 2011)
-    ]  # get share of rail in 2011
+def HSR(i, j, m) -> Quantity:
 
-    hsr = computations.concat(
-        hsr,
-        Quantity(
-            pd.Series(
-                pd.DataFrame(
-                    {
-                        "n": hsr.index.get_level_values("n"),
-                        "mode": hsr.index.get_level_values("mode"),
-                        "y": 2050,
-                        0: 0.527,
-                    }
-                ).set_index(["n", "mode", "y"])[0]
-            )
-        ),  # set share of rail to 52.7% in 2050 for all regions
-        Quantity(
-            pd.Series(
-                pd.DataFrame(
-                    {
-                        "n": np.nan,
-                        "mode": np.nan,
-                        "y": range(2051, 2101),
-                        0: 0,
-                    }
-                ).set_index(["n", "mode", "y"])[0]
-            )
-        ),  # keep the share constant beyond 2050
+    x = Daily_travel(2, j, m)
+
+    # Keep both long-distance categories
+    long_dist_pdt = x[
+        x.index.get_level_values("trip_dist").isin(["31_50", "51+"])
+    ]
+    long_dist_pdt = computations.group_sum(
+        group=["y", "n", "trip_dist", "area_type"],  # keep trip_dist
+        sum="mode",
+        qty=long_dist_pdt,
     )
 
-    hsr = hsr.ffill("y")
-    # Interpolate
-    years = list(range(2011, 2101))
-    hsr = computations.interpolate(hsr, dict(y=years))
+    # Rail share in 2011
+    long_dist_rail = x[
+        (x.index.get_level_values("mode") == "rail_share")
+        & (x.index.get_level_values("y") == 2011)
+        & (x.index.get_level_values("trip_dist").isin(["31_50", "51+"]))
+    ]
 
-    # Calculate total pdt by rail
-    pdt_rail = (
-        computations.group_sum(
-            group=["y"], sum="mode", qty=long_dist_travel
-        )
-        * hsr
-    )
+    long_dist_rail_share = long_dist_rail / long_dist_pdt.xs(2011, level="y")
 
-    # Calculate road_based pdt
-    # - Calculate share of bus and LDV
-    # - Multiply by remaining pdt (not from rail)
-    pdt_bus_car = (
-        long_dist_travel[
-            long_dist_travel.index.get_level_values("mode").isin(
-                ["ldv_share", "bus_share"]
-            )
-        ]
-        / computations.group_sum(
-            group=["y"],
-            sum="mode",
-            qty=long_dist_travel[
-                long_dist_travel.index.get_level_values("mode").isin(
-                    ["ldv_share", "bus_share"]
-                )
-            ],
-        )
-        * (
-            computations.group_sum(
-                group=["y"], sum="mode", qty=long_dist_travel
-            )
-            - pdt_rail.drop("mode")
-        )
-    )
+    # Country-specific 2050 target shares (applied to both trip distances)
+    countries = [
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Sri Lanka",
+        "Afghanistan",
+        "Bhutan",
+        "Nepal",
+        "Maldives",
+    ]
+    rail_share_2050 = [0.6, 0.25, 0.25, 0.4, 0, 0, 0, 0]
 
-    # Concat all quantities
-    hsr = computations.concat(
-        long_dist_travel[
-            long_dist_travel.index.get_level_values("mode").isin(
-                ["nmt_share", "tw_share", "ipt_share"]
-            )
+    df2050 = pd.DataFrame(
+        [
+            (c, td, at, "rail_share", 2050, val)
+            for c, val in zip(countries, rail_share_2050)
+            for td in ["31_50", "51+"]
+            for at in ["city", "town", "rural", "large_city"]
         ],
-        pdt_rail,
-        pdt_bus_car,
+        # replicate for both trip distances
+        columns=["n", "trip_dist", "area_type", "mode", "y", 0],
+    ).set_index(["n", "trip_dist", "area_type", "mode", "y"])[0]
+
+    # Extend to 2100
+    dfBeyond = pd.DataFrame(
+        [
+            (c, td, at, "rail_share", y, val)
+            for c, val in zip(countries, rail_share_2050)
+            for td in ["31_50", "51+"]
+            for at in ["city", "town", "rural", "large_city"]
+            for y in range(2051, 2101)
+        ],
+        columns=["n", "trip_dist", "area_type", "mode", "y", "value"],
+    ).set_index(["n", "trip_dist", "area_type", "mode", "y"])["value"]
+
+    hsr = computations.concat(
+        long_dist_rail_share,
+        Quantity(df2050),
+        Quantity(dfBeyond),
     )
+
+    # Forward-fill and interpolate years
+    hsr = hsr.ffill("y")
+
+    hsr = computations.interpolate(hsr, dict(y=list(range(2011, 2101))))
+
+    # Scale by total long-distance PDT
+    hsr = hsr * long_dist_pdt
+
+    # Other modes (everything except rail)
+    other_modes = x[
+        x.index.get_level_values("trip_dist").isin(["31_50", "51+"])
+        & (x.index.get_level_values("mode") != "rail_share")
+    ]
+
+    other_modes_pdt = computations.group_sum(
+        group=["y", "n", "trip_dist", "area_type"],
+        sum="mode",
+        qty=other_modes,
+    )
+
+    other_modes_share = other_modes / other_modes_pdt
+
+    other_modes_total = (long_dist_pdt - hsr.drop("mode")) * other_modes_share
+
+    hsr = computations.concat(hsr, other_modes_total)
 
     return hsr
 
@@ -202,9 +203,7 @@ def NMT(i) -> Quantity:
     # find increase in share of nmt due to mode switch
     nmt_share = 3 - (nmt["bus_share"] + nmt["tw_share"])
     # Expand dims to include parameter
-    nmt_share = nmt_share.expand_dims(
-        parameter={"nmt_share": len(nmt_share)}
-    )
+    nmt_share = nmt_share.expand_dims(parameter={"nmt_share": len(nmt_share)})
     # Concat
     nmt = computations.concat(nmt, nmt_share)
     # Expand dimensions to include trip distance
@@ -239,9 +238,7 @@ def PT(i) -> Quantity:
     bus_share = 1 + computations.group_sum(
         bus_share, group=["area_type", "y"], sum="parameter"
     )
-    bus_share = bus_share.expand_dims(
-        parameter={"bus_share": len(bus_share)}
-    )
+    bus_share = bus_share.expand_dims(parameter={"bus_share": len(bus_share)})
     bus_share = bus_share[bus_share.index.get_level_values("y") > 2030]
 
     pt = computations.concat(pt, bus_share)
@@ -351,9 +348,7 @@ def RH(i) -> Quantity:
     occ = ldv_share / (rh_vdt + (ldv_pdt / occ_ldv))
     # Expand dims to concat
     occ = occ.expand_dims(parameter={"ldv_occ": len(occ)})
-    ldv_share = ldv_share.expand_dims(
-        parameter={"ldv_share": len(ldv_share)}
-    )
+    ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(ldv_share)})
     rh = computations.concat(rh, ldv_share, occ)
     return rh
 
@@ -451,9 +446,7 @@ def RS(i) -> Quantity:
     occ = ldv_share / (rs_vdt + (ldv_pdt / occ_ldv))
     # Expand dims to concat
     occ = occ.expand_dims(parameter={"ldv_occ": len(occ)})
-    ldv_share = ldv_share.expand_dims(
-        parameter={"ldv_share": len(ldv_share)}
-    )
+    ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(ldv_share)})
     rs = computations.concat(rs, ldv_share, occ)
     return rs
 
@@ -482,12 +475,12 @@ class Scenario:
     def flags(self, phen_name, status):
         self.phen_status[phen_name] = status
 
-    def call_function(self, i, m):
+    def call_function(self, i, j, m):
         for phen_name, status in self.phen_status.items():
             if status:
                 function = globals()[phen_name]
                 if phen_name == "HSR":
-                    result = function(i, m)
+                    result = function(i, j, m)
                 else:
                     result = function(i)
                 self.quantities[phen_name] = result
@@ -502,7 +495,7 @@ Base = Scenario("Base")
 
 # define i
 i = 0
-# Deinfm- mode share trajectory - {1,2,3}
+# Define mode share trajectory - {1,2,3}
 for m in range(1, 4):
     for j in range(1, 3):
         # populate scenario with phenomenon status and quantities
@@ -516,40 +509,42 @@ for m in range(1, 4):
             ("RS", [False, True, False, True, False]),
             ("PT", [True, True, True, False, False]),
             ("TODU", [False, False, True, False, False]),
-            ("ELIFE", [False, False, False, True, False]),
+            ("ELIFE", [False, False, False, False, False]),
             ("HSR", [False, True, False, False, False]),
             ("MAAS", [False, False, False, True, False]),
         ):
             for flag, scen in zip(flags, [NP, BP, TOD, TECH, Base]):
                 scen.flags(p_id, flag)
-                scen.call_function(i, m)
+                scen.call_function(i, j, m)
 
         def scen_info(scen: Scenario, j, m):
             """Return various calculated parameters for each scenario."""
             # Default total PDT (mode, n, area_type, trip_dist, y): values
             # in `pc_dt` (generated by demand_model.py)
             total_pdt = Daily_travel(2, j, m)
+            daily_pdt = total_pdt[
+                ~total_pdt.index.get_level_values("trip_dist").isin(
+                    ["31_50", "51+"]
+                )
+            ]
+            long_dist = total_pdt[
+                total_pdt.index.get_level_values("trip_dist").isin(
+                    ["31_50", "51+"]
+                )
+            ]
             ldt_factor = 1
-
-            # Calculate total_pdt given any impacts from `pdt_dt` factors
+            # Apply phenomena impacts
             for phen_id, value in scen.quantities.items():
-                # print(f"{phen_id = }")
+                if phen_id in ["HSR"]:
+                    continue  # skip long-distance phenomena her
 
                 y = value.get("pdt", 1.0)
                 # Trip rate; impacts total PDT
-                trip_rate = value.get(
-                    "trip_rate", 1.0
-                )  # Non-default for ELF
+                trip_rate = value.get("trip_rate", 1.0)  # Non-default for ELF
                 # Adjust LDV, NMT, and PT shares
-                ldv_share = value.get(
-                    "ldv_share", 1.0
-                )  # Non-default for RH
-                nmt_share = value.get(
-                    "nmt_share", 1.0
-                )  # Non-default for TODU
-                bus_share = value.get(
-                    "bus_share", 1.0
-                )  # Non-default for RH
+                ldv_share = value.get("ldv_share", 1.0)  # Non-default for RH
+                nmt_share = value.get("nmt_share", 1.0)  # Non-default for TODU
+                bus_share = value.get("bus_share", 1.0)  # Non-default for RH
                 ldv_occ = value.get("ldv_occ", 2.1)
                 tw_share = value.get(
                     "tw_share", 1.0
@@ -557,9 +552,7 @@ for m in range(1, 4):
                 # NB not currently used
                 # Non-default for RS, RH
                 ev_share = value.get("ev_share", 1)  # Non-default for ENV
-                ldv_own = value.get(
-                    "ldv_own", 1
-                )  # non-default for HSL, TODU
+                ldv_own = value.get("ldv_own", 1)  # non-default for HSL, TODU
 
                 if phen_id in ["URB", "TODU"]:
                     # Phenomena where the `pdt` value has multiplicative effect
@@ -567,60 +560,39 @@ for m in range(1, 4):
                 else:
                     pdt_mul = Quantity(1.0)
 
-                for k in total_pdt:
-                    # print(f"{k = }")
-                    # print(f"{total_pdt[k] = }")
-                    # print(f"{pdt_mul = }")
-                    # print(pdt_mul.to_frame().to_string())
-                    # print(f"{trip_rate = }")
-                    total_pdt[k] *= pdt_mul * trip_rate
+                    # pdt_mul = 1
 
-                total_pdt["ldv_share"] *= ldv_share
-                total_pdt["bus_share"] *= bus_share
-                total_pdt["nmt_share"] *= nmt_share
-                total_pdt["tw_share"] *= tw_share
+                daily_pdt *= pdt_mul * trip_rate
 
-                if phen_id in "ELIFE":
-                    print(f"{phen_id=}")
-                    factor = 0.9
-                else:
-                    factor = 1
+                daily_pdt["ldv_share"] *= ldv_share
+                daily_pdt["bus_share"] *= bus_share
+                daily_pdt["nmt_share"] *= nmt_share
+                daily_pdt["tw_share"] *= tw_share
 
-                ldt_factor *= factor
-
-                if phen_id in "HSR":
-                    print(f"{phen_id=}")
+            for phen_id, value in scen.quantities.items():
+                if phen_id == "ELIFE":
+                    factor = (
+                        0.9  # Example reduction for ELIFE on long-distance
+                    )
+                    ldt_factor *= factor
+                elif phen_id == "HSR":
                     ldt = value * ldt_factor
                     break
             else:
-                ldt = Long_dist_travel(2, m)[0] * ldt_factor
+                # If no HSR, scale long-distance trips by factor
+                ldt = long_dist * ldt_factor
 
-            ldt = ldt.expand_dims(
-                trip_dist={"None": len(ldt)},
-                area_type={"Long_dist": len(ldt)},
-            )
-
-            daily_travel_pdt = Key(
-                "daily_travel_pdt",
-                ["mode", "area_type", "trip_dist", "y", "n"],
-            )
-
-            for i in total_pdt.keys():
-                daily_travel_pdt = computations.concat(
-                    daily_travel_pdt, total_pdt[i]
-                )
-
-            total_pdt = computations.concat(daily_travel_pdt, ldt * 1000)
+            total_pdt = computations.concat(daily_pdt, ldt)
             total_pdt = total_pdt.drop_duplicates()
 
             computations.write_report(
-                total_pdt, f"total_pdt_{scen.name}_{j}_{m}.csv"
+                total_pdt, f"total_pdt_{scen.name}_{j}_{m}_elifefalse.csv"
             )
 
             return total_pdt
 
-        scen_info(NP, j, m)
-        scen_info(BP, j, m)
-        scen_info(TOD, j, m)
+        # scen_info(NP, j, m)
+        # scen_info(BP, j, m)
+        # scen_info(TOD, j, m)
         scen_info(TECH, j, m)
-        scen_info(Base, j, m)
+    # scen_info(Base, j, m)

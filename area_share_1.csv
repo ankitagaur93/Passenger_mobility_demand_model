@@ -1,0 +1,2161 @@
+n,area_type,y,value
+Afghanistan,city,2011,0.3059
+Afghanistan,city,2012,0.3045842105263158
+Afghanistan,city,2013,0.3032684210526316
+Afghanistan,city,2014,0.30195263157894736
+Afghanistan,city,2015,0.30063684210526315
+Afghanistan,city,2016,0.29932105263157893
+Afghanistan,city,2017,0.2980052631578947
+Afghanistan,city,2018,0.2966894736842105
+Afghanistan,city,2019,0.2953736842105263
+Afghanistan,city,2020,0.2940578947368421
+Afghanistan,city,2021,0.2927421052631579
+Afghanistan,city,2022,0.2914263157894737
+Afghanistan,city,2023,0.2901105263157895
+Afghanistan,city,2024,0.28879473684210527
+Afghanistan,city,2025,0.28747894736842106
+Afghanistan,city,2026,0.28616315789473684
+Afghanistan,city,2027,0.2848473684210526
+Afghanistan,city,2028,0.2835315789473684
+Afghanistan,city,2029,0.2822157894736842
+Afghanistan,city,2030,0.2809
+Afghanistan,city,2031,0.2804
+Afghanistan,city,2032,0.2799
+Afghanistan,city,2033,0.2794
+Afghanistan,city,2034,0.2789
+Afghanistan,city,2035,0.2784
+Afghanistan,city,2036,0.2779
+Afghanistan,city,2037,0.2774
+Afghanistan,city,2038,0.2769
+Afghanistan,city,2039,0.2764
+Afghanistan,city,2040,0.2759
+Afghanistan,city,2041,0.2754
+Afghanistan,city,2042,0.2749
+Afghanistan,city,2043,0.2744
+Afghanistan,city,2044,0.2739
+Afghanistan,city,2045,0.2734
+Afghanistan,city,2046,0.2729
+Afghanistan,city,2047,0.2724
+Afghanistan,city,2048,0.2719
+Afghanistan,city,2049,0.2714
+Afghanistan,city,2050,0.2709
+Afghanistan,city,2051,0.2709
+Afghanistan,city,2052,0.2709
+Afghanistan,city,2053,0.2709
+Afghanistan,city,2054,0.2709
+Afghanistan,city,2055,0.2709
+Afghanistan,city,2056,0.2709
+Afghanistan,city,2057,0.2709
+Afghanistan,city,2058,0.2709
+Afghanistan,city,2059,0.2709
+Afghanistan,city,2060,0.2709
+Afghanistan,city,2061,0.2709
+Afghanistan,city,2062,0.2709
+Afghanistan,city,2063,0.2709
+Afghanistan,city,2064,0.2709
+Afghanistan,city,2065,0.2709
+Afghanistan,city,2066,0.2709
+Afghanistan,city,2067,0.2709
+Afghanistan,city,2068,0.2709
+Afghanistan,city,2069,0.2709
+Afghanistan,city,2070,0.2709
+Afghanistan,city,2071,0.2709
+Afghanistan,city,2072,0.2709
+Afghanistan,city,2073,0.2709
+Afghanistan,city,2074,0.2709
+Afghanistan,city,2075,0.2709
+Afghanistan,city,2076,0.2709
+Afghanistan,city,2077,0.2709
+Afghanistan,city,2078,0.2709
+Afghanistan,city,2079,0.2709
+Afghanistan,city,2080,0.2709
+Afghanistan,city,2081,0.2709
+Afghanistan,city,2082,0.2709
+Afghanistan,city,2083,0.2709
+Afghanistan,city,2084,0.2709
+Afghanistan,city,2085,0.2709
+Afghanistan,city,2086,0.2709
+Afghanistan,city,2087,0.2709
+Afghanistan,city,2088,0.2709
+Afghanistan,city,2089,0.2709
+Afghanistan,city,2090,0.2709
+Afghanistan,city,2091,0.2709
+Afghanistan,city,2092,0.2709
+Afghanistan,city,2093,0.2709
+Afghanistan,city,2094,0.2709
+Afghanistan,city,2095,0.2709
+Afghanistan,city,2096,0.2709
+Afghanistan,city,2097,0.2709
+Afghanistan,city,2098,0.2709
+Afghanistan,city,2099,0.2709
+Afghanistan,city,2100,0.2709
+Afghanistan,large_city,2011,0.57
+Afghanistan,large_city,2012,0.5726315789473684
+Afghanistan,large_city,2013,0.5752631578947368
+Afghanistan,large_city,2014,0.5778947368421052
+Afghanistan,large_city,2015,0.5805263157894737
+Afghanistan,large_city,2016,0.5831578947368421
+Afghanistan,large_city,2017,0.5857894736842105
+Afghanistan,large_city,2018,0.588421052631579
+Afghanistan,large_city,2019,0.5910526315789474
+Afghanistan,large_city,2020,0.5936842105263158
+Afghanistan,large_city,2021,0.5963157894736841
+Afghanistan,large_city,2022,0.5989473684210526
+Afghanistan,large_city,2023,0.601578947368421
+Afghanistan,large_city,2024,0.6042105263157894
+Afghanistan,large_city,2025,0.6068421052631578
+Afghanistan,large_city,2026,0.6094736842105263
+Afghanistan,large_city,2027,0.6121052631578947
+Afghanistan,large_city,2028,0.6147368421052631
+Afghanistan,large_city,2029,0.6173684210526316
+Afghanistan,large_city,2030,0.62
+Afghanistan,large_city,2031,0.621
+Afghanistan,large_city,2032,0.622
+Afghanistan,large_city,2033,0.623
+Afghanistan,large_city,2034,0.624
+Afghanistan,large_city,2035,0.625
+Afghanistan,large_city,2036,0.626
+Afghanistan,large_city,2037,0.627
+Afghanistan,large_city,2038,0.628
+Afghanistan,large_city,2039,0.629
+Afghanistan,large_city,2040,0.63
+Afghanistan,large_city,2041,0.631
+Afghanistan,large_city,2042,0.632
+Afghanistan,large_city,2043,0.633
+Afghanistan,large_city,2044,0.634
+Afghanistan,large_city,2045,0.635
+Afghanistan,large_city,2046,0.636
+Afghanistan,large_city,2047,0.637
+Afghanistan,large_city,2048,0.638
+Afghanistan,large_city,2049,0.639
+Afghanistan,large_city,2050,0.64
+Afghanistan,large_city,2051,0.64
+Afghanistan,large_city,2052,0.64
+Afghanistan,large_city,2053,0.64
+Afghanistan,large_city,2054,0.64
+Afghanistan,large_city,2055,0.64
+Afghanistan,large_city,2056,0.64
+Afghanistan,large_city,2057,0.64
+Afghanistan,large_city,2058,0.64
+Afghanistan,large_city,2059,0.64
+Afghanistan,large_city,2060,0.64
+Afghanistan,large_city,2061,0.64
+Afghanistan,large_city,2062,0.64
+Afghanistan,large_city,2063,0.64
+Afghanistan,large_city,2064,0.64
+Afghanistan,large_city,2065,0.64
+Afghanistan,large_city,2066,0.64
+Afghanistan,large_city,2067,0.64
+Afghanistan,large_city,2068,0.64
+Afghanistan,large_city,2069,0.64
+Afghanistan,large_city,2070,0.64
+Afghanistan,large_city,2071,0.64
+Afghanistan,large_city,2072,0.64
+Afghanistan,large_city,2073,0.64
+Afghanistan,large_city,2074,0.64
+Afghanistan,large_city,2075,0.64
+Afghanistan,large_city,2076,0.64
+Afghanistan,large_city,2077,0.64
+Afghanistan,large_city,2078,0.64
+Afghanistan,large_city,2079,0.64
+Afghanistan,large_city,2080,0.64
+Afghanistan,large_city,2081,0.64
+Afghanistan,large_city,2082,0.64
+Afghanistan,large_city,2083,0.64
+Afghanistan,large_city,2084,0.64
+Afghanistan,large_city,2085,0.64
+Afghanistan,large_city,2086,0.64
+Afghanistan,large_city,2087,0.64
+Afghanistan,large_city,2088,0.64
+Afghanistan,large_city,2089,0.64
+Afghanistan,large_city,2090,0.64
+Afghanistan,large_city,2091,0.64
+Afghanistan,large_city,2092,0.64
+Afghanistan,large_city,2093,0.64
+Afghanistan,large_city,2094,0.64
+Afghanistan,large_city,2095,0.64
+Afghanistan,large_city,2096,0.64
+Afghanistan,large_city,2097,0.64
+Afghanistan,large_city,2098,0.64
+Afghanistan,large_city,2099,0.64
+Afghanistan,large_city,2100,0.64
+Afghanistan,town,2011,0.1241
+Afghanistan,town,2012,0.12278421052631579
+Afghanistan,town,2013,0.12146842105263159
+Afghanistan,town,2014,0.12015263157894737
+Afghanistan,town,2015,0.11883684210526316
+Afghanistan,town,2016,0.11752105263157894
+Afghanistan,town,2017,0.11620526315789474
+Afghanistan,town,2018,0.11488947368421053
+Afghanistan,town,2019,0.11357368421052631
+Afghanistan,town,2020,0.1122578947368421
+Afghanistan,town,2021,0.1109421052631579
+Afghanistan,town,2022,0.10962631578947368
+Afghanistan,town,2023,0.10831052631578947
+Afghanistan,town,2024,0.10699473684210525
+Afghanistan,town,2025,0.10567894736842105
+Afghanistan,town,2026,0.10436315789473684
+Afghanistan,town,2027,0.10304736842105262
+Afghanistan,town,2028,0.10173157894736842
+Afghanistan,town,2029,0.10041578947368421
+Afghanistan,town,2030,0.0991
+Afghanistan,town,2031,0.0986
+Afghanistan,town,2032,0.09809999999999999
+Afghanistan,town,2033,0.09759999999999999
+Afghanistan,town,2034,0.09709999999999999
+Afghanistan,town,2035,0.09659999999999999
+Afghanistan,town,2036,0.09609999999999999
+Afghanistan,town,2037,0.09559999999999999
+Afghanistan,town,2038,0.09509999999999999
+Afghanistan,town,2039,0.09459999999999999
+Afghanistan,town,2040,0.09409999999999999
+Afghanistan,town,2041,0.09359999999999999
+Afghanistan,town,2042,0.0931
+Afghanistan,town,2043,0.0926
+Afghanistan,town,2044,0.0921
+Afghanistan,town,2045,0.0916
+Afghanistan,town,2046,0.0911
+Afghanistan,town,2047,0.0906
+Afghanistan,town,2048,0.0901
+Afghanistan,town,2049,0.0896
+Afghanistan,town,2050,0.0891
+Afghanistan,town,2051,0.0891
+Afghanistan,town,2052,0.0891
+Afghanistan,town,2053,0.0891
+Afghanistan,town,2054,0.0891
+Afghanistan,town,2055,0.0891
+Afghanistan,town,2056,0.0891
+Afghanistan,town,2057,0.0891
+Afghanistan,town,2058,0.0891
+Afghanistan,town,2059,0.0891
+Afghanistan,town,2060,0.0891
+Afghanistan,town,2061,0.0891
+Afghanistan,town,2062,0.0891
+Afghanistan,town,2063,0.0891
+Afghanistan,town,2064,0.0891
+Afghanistan,town,2065,0.0891
+Afghanistan,town,2066,0.0891
+Afghanistan,town,2067,0.0891
+Afghanistan,town,2068,0.0891
+Afghanistan,town,2069,0.0891
+Afghanistan,town,2070,0.0891
+Afghanistan,town,2071,0.0891
+Afghanistan,town,2072,0.0891
+Afghanistan,town,2073,0.0891
+Afghanistan,town,2074,0.0891
+Afghanistan,town,2075,0.0891
+Afghanistan,town,2076,0.0891
+Afghanistan,town,2077,0.0891
+Afghanistan,town,2078,0.0891
+Afghanistan,town,2079,0.0891
+Afghanistan,town,2080,0.0891
+Afghanistan,town,2081,0.0891
+Afghanistan,town,2082,0.0891
+Afghanistan,town,2083,0.0891
+Afghanistan,town,2084,0.0891
+Afghanistan,town,2085,0.0891
+Afghanistan,town,2086,0.0891
+Afghanistan,town,2087,0.0891
+Afghanistan,town,2088,0.0891
+Afghanistan,town,2089,0.0891
+Afghanistan,town,2090,0.0891
+Afghanistan,town,2091,0.0891
+Afghanistan,town,2092,0.0891
+Afghanistan,town,2093,0.0891
+Afghanistan,town,2094,0.0891
+Afghanistan,town,2095,0.0891
+Afghanistan,town,2096,0.0891
+Afghanistan,town,2097,0.0891
+Afghanistan,town,2098,0.0891
+Afghanistan,town,2099,0.0891
+Afghanistan,town,2100,0.0891
+Bangladesh,city,2011,0.3
+Bangladesh,city,2012,0.2986842105263158
+Bangladesh,city,2013,0.29736842105263156
+Bangladesh,city,2014,0.29605263157894735
+Bangladesh,city,2015,0.29473684210526313
+Bangladesh,city,2016,0.2934210526315789
+Bangladesh,city,2017,0.2921052631578947
+Bangladesh,city,2018,0.2907894736842105
+Bangladesh,city,2019,0.28947368421052627
+Bangladesh,city,2020,0.28815789473684206
+Bangladesh,city,2021,0.2868421052631579
+Bangladesh,city,2022,0.2855263157894737
+Bangladesh,city,2023,0.28421052631578947
+Bangladesh,city,2024,0.28289473684210525
+Bangladesh,city,2025,0.28157894736842104
+Bangladesh,city,2026,0.2802631578947368
+Bangladesh,city,2027,0.2789473684210526
+Bangladesh,city,2028,0.2776315789473684
+Bangladesh,city,2029,0.2763157894736842
+Bangladesh,city,2030,0.27499999999999997
+Bangladesh,city,2031,0.27449999999999997
+Bangladesh,city,2032,0.27399999999999997
+Bangladesh,city,2033,0.27349999999999997
+Bangladesh,city,2034,0.27299999999999996
+Bangladesh,city,2035,0.27249999999999996
+Bangladesh,city,2036,0.27199999999999996
+Bangladesh,city,2037,0.27149999999999996
+Bangladesh,city,2038,0.27099999999999996
+Bangladesh,city,2039,0.27049999999999996
+Bangladesh,city,2040,0.26999999999999996
+Bangladesh,city,2041,0.26949999999999996
+Bangladesh,city,2042,0.26899999999999996
+Bangladesh,city,2043,0.26849999999999996
+Bangladesh,city,2044,0.26799999999999996
+Bangladesh,city,2045,0.26749999999999996
+Bangladesh,city,2046,0.26699999999999996
+Bangladesh,city,2047,0.26649999999999996
+Bangladesh,city,2048,0.26599999999999996
+Bangladesh,city,2049,0.26549999999999996
+Bangladesh,city,2050,0.26499999999999996
+Bangladesh,city,2051,0.26499999999999996
+Bangladesh,city,2052,0.26499999999999996
+Bangladesh,city,2053,0.26499999999999996
+Bangladesh,city,2054,0.26499999999999996
+Bangladesh,city,2055,0.26499999999999996
+Bangladesh,city,2056,0.26499999999999996
+Bangladesh,city,2057,0.26499999999999996
+Bangladesh,city,2058,0.26499999999999996
+Bangladesh,city,2059,0.26499999999999996
+Bangladesh,city,2060,0.26499999999999996
+Bangladesh,city,2061,0.26499999999999996
+Bangladesh,city,2062,0.26499999999999996
+Bangladesh,city,2063,0.26499999999999996
+Bangladesh,city,2064,0.26499999999999996
+Bangladesh,city,2065,0.26499999999999996
+Bangladesh,city,2066,0.26499999999999996
+Bangladesh,city,2067,0.26499999999999996
+Bangladesh,city,2068,0.26499999999999996
+Bangladesh,city,2069,0.26499999999999996
+Bangladesh,city,2070,0.26499999999999996
+Bangladesh,city,2071,0.26499999999999996
+Bangladesh,city,2072,0.26499999999999996
+Bangladesh,city,2073,0.26499999999999996
+Bangladesh,city,2074,0.26499999999999996
+Bangladesh,city,2075,0.26499999999999996
+Bangladesh,city,2076,0.26499999999999996
+Bangladesh,city,2077,0.26499999999999996
+Bangladesh,city,2078,0.26499999999999996
+Bangladesh,city,2079,0.26499999999999996
+Bangladesh,city,2080,0.26499999999999996
+Bangladesh,city,2081,0.26499999999999996
+Bangladesh,city,2082,0.26499999999999996
+Bangladesh,city,2083,0.26499999999999996
+Bangladesh,city,2084,0.26499999999999996
+Bangladesh,city,2085,0.26499999999999996
+Bangladesh,city,2086,0.26499999999999996
+Bangladesh,city,2087,0.26499999999999996
+Bangladesh,city,2088,0.26499999999999996
+Bangladesh,city,2089,0.26499999999999996
+Bangladesh,city,2090,0.26499999999999996
+Bangladesh,city,2091,0.26499999999999996
+Bangladesh,city,2092,0.26499999999999996
+Bangladesh,city,2093,0.26499999999999996
+Bangladesh,city,2094,0.26499999999999996
+Bangladesh,city,2095,0.26499999999999996
+Bangladesh,city,2096,0.26499999999999996
+Bangladesh,city,2097,0.26499999999999996
+Bangladesh,city,2098,0.26499999999999996
+Bangladesh,city,2099,0.26499999999999996
+Bangladesh,city,2100,0.26499999999999996
+Bangladesh,large_city,2011,0.34
+Bangladesh,large_city,2012,0.34263157894736845
+Bangladesh,large_city,2013,0.3452631578947369
+Bangladesh,large_city,2014,0.3478947368421053
+Bangladesh,large_city,2015,0.3505263157894737
+Bangladesh,large_city,2016,0.3531578947368421
+Bangladesh,large_city,2017,0.35578947368421054
+Bangladesh,large_city,2018,0.358421052631579
+Bangladesh,large_city,2019,0.3610526315789474
+Bangladesh,large_city,2020,0.36368421052631583
+Bangladesh,large_city,2021,0.3663157894736842
+Bangladesh,large_city,2022,0.36894736842105263
+Bangladesh,large_city,2023,0.37157894736842106
+Bangladesh,large_city,2024,0.3742105263157895
+Bangladesh,large_city,2025,0.3768421052631579
+Bangladesh,large_city,2026,0.37947368421052635
+Bangladesh,large_city,2027,0.3821052631578947
+Bangladesh,large_city,2028,0.38473684210526315
+Bangladesh,large_city,2029,0.3873684210526316
+Bangladesh,large_city,2030,0.39
+Bangladesh,large_city,2031,0.391
+Bangladesh,large_city,2032,0.392
+Bangladesh,large_city,2033,0.393
+Bangladesh,large_city,2034,0.394
+Bangladesh,large_city,2035,0.395
+Bangladesh,large_city,2036,0.396
+Bangladesh,large_city,2037,0.397
+Bangladesh,large_city,2038,0.398
+Bangladesh,large_city,2039,0.399
+Bangladesh,large_city,2040,0.4
+Bangladesh,large_city,2041,0.401
+Bangladesh,large_city,2042,0.402
+Bangladesh,large_city,2043,0.403
+Bangladesh,large_city,2044,0.404
+Bangladesh,large_city,2045,0.405
+Bangladesh,large_city,2046,0.406
+Bangladesh,large_city,2047,0.40700000000000003
+Bangladesh,large_city,2048,0.40800000000000003
+Bangladesh,large_city,2049,0.40900000000000003
+Bangladesh,large_city,2050,0.41000000000000003
+Bangladesh,large_city,2051,0.41000000000000003
+Bangladesh,large_city,2052,0.41000000000000003
+Bangladesh,large_city,2053,0.41000000000000003
+Bangladesh,large_city,2054,0.41000000000000003
+Bangladesh,large_city,2055,0.41000000000000003
+Bangladesh,large_city,2056,0.41000000000000003
+Bangladesh,large_city,2057,0.41000000000000003
+Bangladesh,large_city,2058,0.41000000000000003
+Bangladesh,large_city,2059,0.41000000000000003
+Bangladesh,large_city,2060,0.41000000000000003
+Bangladesh,large_city,2061,0.41000000000000003
+Bangladesh,large_city,2062,0.41000000000000003
+Bangladesh,large_city,2063,0.41000000000000003
+Bangladesh,large_city,2064,0.41000000000000003
+Bangladesh,large_city,2065,0.41000000000000003
+Bangladesh,large_city,2066,0.41000000000000003
+Bangladesh,large_city,2067,0.41000000000000003
+Bangladesh,large_city,2068,0.41000000000000003
+Bangladesh,large_city,2069,0.41000000000000003
+Bangladesh,large_city,2070,0.41000000000000003
+Bangladesh,large_city,2071,0.41000000000000003
+Bangladesh,large_city,2072,0.41000000000000003
+Bangladesh,large_city,2073,0.41000000000000003
+Bangladesh,large_city,2074,0.41000000000000003
+Bangladesh,large_city,2075,0.41000000000000003
+Bangladesh,large_city,2076,0.41000000000000003
+Bangladesh,large_city,2077,0.41000000000000003
+Bangladesh,large_city,2078,0.41000000000000003
+Bangladesh,large_city,2079,0.41000000000000003
+Bangladesh,large_city,2080,0.41000000000000003
+Bangladesh,large_city,2081,0.41000000000000003
+Bangladesh,large_city,2082,0.41000000000000003
+Bangladesh,large_city,2083,0.41000000000000003
+Bangladesh,large_city,2084,0.41000000000000003
+Bangladesh,large_city,2085,0.41000000000000003
+Bangladesh,large_city,2086,0.41000000000000003
+Bangladesh,large_city,2087,0.41000000000000003
+Bangladesh,large_city,2088,0.41000000000000003
+Bangladesh,large_city,2089,0.41000000000000003
+Bangladesh,large_city,2090,0.41000000000000003
+Bangladesh,large_city,2091,0.41000000000000003
+Bangladesh,large_city,2092,0.41000000000000003
+Bangladesh,large_city,2093,0.41000000000000003
+Bangladesh,large_city,2094,0.41000000000000003
+Bangladesh,large_city,2095,0.41000000000000003
+Bangladesh,large_city,2096,0.41000000000000003
+Bangladesh,large_city,2097,0.41000000000000003
+Bangladesh,large_city,2098,0.41000000000000003
+Bangladesh,large_city,2099,0.41000000000000003
+Bangladesh,large_city,2100,0.41000000000000003
+Bangladesh,town,2011,0.36
+Bangladesh,town,2012,0.35868421052631577
+Bangladesh,town,2013,0.35736842105263156
+Bangladesh,town,2014,0.35605263157894734
+Bangladesh,town,2015,0.35473684210526313
+Bangladesh,town,2016,0.3534210526315789
+Bangladesh,town,2017,0.3521052631578947
+Bangladesh,town,2018,0.3507894736842105
+Bangladesh,town,2019,0.34947368421052627
+Bangladesh,town,2020,0.34815789473684206
+Bangladesh,town,2021,0.34684210526315784
+Bangladesh,town,2022,0.3455263157894737
+Bangladesh,town,2023,0.34421052631578947
+Bangladesh,town,2024,0.34289473684210525
+Bangladesh,town,2025,0.34157894736842104
+Bangladesh,town,2026,0.3402631578947368
+Bangladesh,town,2027,0.3389473684210526
+Bangladesh,town,2028,0.3376315789473684
+Bangladesh,town,2029,0.3363157894736842
+Bangladesh,town,2030,0.33499999999999996
+Bangladesh,town,2031,0.33449999999999996
+Bangladesh,town,2032,0.33399999999999996
+Bangladesh,town,2033,0.33349999999999996
+Bangladesh,town,2034,0.33299999999999996
+Bangladesh,town,2035,0.33249999999999996
+Bangladesh,town,2036,0.33199999999999996
+Bangladesh,town,2037,0.33149999999999996
+Bangladesh,town,2038,0.33099999999999996
+Bangladesh,town,2039,0.33049999999999996
+Bangladesh,town,2040,0.32999999999999996
+Bangladesh,town,2041,0.32949999999999996
+Bangladesh,town,2042,0.32899999999999996
+Bangladesh,town,2043,0.32849999999999996
+Bangladesh,town,2044,0.32799999999999996
+Bangladesh,town,2045,0.32749999999999996
+Bangladesh,town,2046,0.32699999999999996
+Bangladesh,town,2047,0.32649999999999996
+Bangladesh,town,2048,0.32599999999999996
+Bangladesh,town,2049,0.32549999999999996
+Bangladesh,town,2050,0.32499999999999996
+Bangladesh,town,2051,0.32499999999999996
+Bangladesh,town,2052,0.32499999999999996
+Bangladesh,town,2053,0.32499999999999996
+Bangladesh,town,2054,0.32499999999999996
+Bangladesh,town,2055,0.32499999999999996
+Bangladesh,town,2056,0.32499999999999996
+Bangladesh,town,2057,0.32499999999999996
+Bangladesh,town,2058,0.32499999999999996
+Bangladesh,town,2059,0.32499999999999996
+Bangladesh,town,2060,0.32499999999999996
+Bangladesh,town,2061,0.32499999999999996
+Bangladesh,town,2062,0.32499999999999996
+Bangladesh,town,2063,0.32499999999999996
+Bangladesh,town,2064,0.32499999999999996
+Bangladesh,town,2065,0.32499999999999996
+Bangladesh,town,2066,0.32499999999999996
+Bangladesh,town,2067,0.32499999999999996
+Bangladesh,town,2068,0.32499999999999996
+Bangladesh,town,2069,0.32499999999999996
+Bangladesh,town,2070,0.32499999999999996
+Bangladesh,town,2071,0.32499999999999996
+Bangladesh,town,2072,0.32499999999999996
+Bangladesh,town,2073,0.32499999999999996
+Bangladesh,town,2074,0.32499999999999996
+Bangladesh,town,2075,0.32499999999999996
+Bangladesh,town,2076,0.32499999999999996
+Bangladesh,town,2077,0.32499999999999996
+Bangladesh,town,2078,0.32499999999999996
+Bangladesh,town,2079,0.32499999999999996
+Bangladesh,town,2080,0.32499999999999996
+Bangladesh,town,2081,0.32499999999999996
+Bangladesh,town,2082,0.32499999999999996
+Bangladesh,town,2083,0.32499999999999996
+Bangladesh,town,2084,0.32499999999999996
+Bangladesh,town,2085,0.32499999999999996
+Bangladesh,town,2086,0.32499999999999996
+Bangladesh,town,2087,0.32499999999999996
+Bangladesh,town,2088,0.32499999999999996
+Bangladesh,town,2089,0.32499999999999996
+Bangladesh,town,2090,0.32499999999999996
+Bangladesh,town,2091,0.32499999999999996
+Bangladesh,town,2092,0.32499999999999996
+Bangladesh,town,2093,0.32499999999999996
+Bangladesh,town,2094,0.32499999999999996
+Bangladesh,town,2095,0.32499999999999996
+Bangladesh,town,2096,0.32499999999999996
+Bangladesh,town,2097,0.32499999999999996
+Bangladesh,town,2098,0.32499999999999996
+Bangladesh,town,2099,0.32499999999999996
+Bangladesh,town,2100,0.32499999999999996
+Bhutan,city,2011,0.33
+Bhutan,city,2012,0.3286842105263158
+Bhutan,city,2013,0.3273684210526316
+Bhutan,city,2014,0.32605263157894737
+Bhutan,city,2015,0.32473684210526316
+Bhutan,city,2016,0.32342105263157894
+Bhutan,city,2017,0.32210526315789473
+Bhutan,city,2018,0.3207894736842105
+Bhutan,city,2019,0.3194736842105263
+Bhutan,city,2020,0.3181578947368421
+Bhutan,city,2021,0.3168421052631579
+Bhutan,city,2022,0.3155263157894737
+Bhutan,city,2023,0.3142105263157895
+Bhutan,city,2024,0.3128947368421053
+Bhutan,city,2025,0.31157894736842107
+Bhutan,city,2026,0.31026315789473685
+Bhutan,city,2027,0.30894736842105264
+Bhutan,city,2028,0.3076315789473684
+Bhutan,city,2029,0.3063157894736842
+Bhutan,city,2030,0.305
+Bhutan,city,2031,0.3045
+Bhutan,city,2032,0.304
+Bhutan,city,2033,0.3035
+Bhutan,city,2034,0.303
+Bhutan,city,2035,0.3025
+Bhutan,city,2036,0.302
+Bhutan,city,2037,0.3015
+Bhutan,city,2038,0.301
+Bhutan,city,2039,0.3005
+Bhutan,city,2040,0.3
+Bhutan,city,2041,0.2995
+Bhutan,city,2042,0.299
+Bhutan,city,2043,0.2985
+Bhutan,city,2044,0.298
+Bhutan,city,2045,0.2975
+Bhutan,city,2046,0.297
+Bhutan,city,2047,0.2965
+Bhutan,city,2048,0.296
+Bhutan,city,2049,0.2955
+Bhutan,city,2050,0.295
+Bhutan,city,2051,0.295
+Bhutan,city,2052,0.295
+Bhutan,city,2053,0.295
+Bhutan,city,2054,0.295
+Bhutan,city,2055,0.295
+Bhutan,city,2056,0.295
+Bhutan,city,2057,0.295
+Bhutan,city,2058,0.295
+Bhutan,city,2059,0.295
+Bhutan,city,2060,0.295
+Bhutan,city,2061,0.295
+Bhutan,city,2062,0.295
+Bhutan,city,2063,0.295
+Bhutan,city,2064,0.295
+Bhutan,city,2065,0.295
+Bhutan,city,2066,0.295
+Bhutan,city,2067,0.295
+Bhutan,city,2068,0.295
+Bhutan,city,2069,0.295
+Bhutan,city,2070,0.295
+Bhutan,city,2071,0.295
+Bhutan,city,2072,0.295
+Bhutan,city,2073,0.295
+Bhutan,city,2074,0.295
+Bhutan,city,2075,0.295
+Bhutan,city,2076,0.295
+Bhutan,city,2077,0.295
+Bhutan,city,2078,0.295
+Bhutan,city,2079,0.295
+Bhutan,city,2080,0.295
+Bhutan,city,2081,0.295
+Bhutan,city,2082,0.295
+Bhutan,city,2083,0.295
+Bhutan,city,2084,0.295
+Bhutan,city,2085,0.295
+Bhutan,city,2086,0.295
+Bhutan,city,2087,0.295
+Bhutan,city,2088,0.295
+Bhutan,city,2089,0.295
+Bhutan,city,2090,0.295
+Bhutan,city,2091,0.295
+Bhutan,city,2092,0.295
+Bhutan,city,2093,0.295
+Bhutan,city,2094,0.295
+Bhutan,city,2095,0.295
+Bhutan,city,2096,0.295
+Bhutan,city,2097,0.295
+Bhutan,city,2098,0.295
+Bhutan,city,2099,0.295
+Bhutan,city,2100,0.295
+Bhutan,large_city,2011,0.414
+Bhutan,large_city,2012,0.4166315789473684
+Bhutan,large_city,2013,0.41926315789473684
+Bhutan,large_city,2014,0.42189473684210527
+Bhutan,large_city,2015,0.42452631578947364
+Bhutan,large_city,2016,0.42715789473684207
+Bhutan,large_city,2017,0.4297894736842105
+Bhutan,large_city,2018,0.43242105263157893
+Bhutan,large_city,2019,0.43505263157894736
+Bhutan,large_city,2020,0.4376842105263158
+Bhutan,large_city,2021,0.44031578947368416
+Bhutan,large_city,2022,0.4429473684210526
+Bhutan,large_city,2023,0.445578947368421
+Bhutan,large_city,2024,0.44821052631578945
+Bhutan,large_city,2025,0.4508421052631579
+Bhutan,large_city,2026,0.4534736842105263
+Bhutan,large_city,2027,0.4561052631578947
+Bhutan,large_city,2028,0.4587368421052631
+Bhutan,large_city,2029,0.46136842105263154
+Bhutan,large_city,2030,0.46399999999999997
+Bhutan,large_city,2031,0.46499999999999997
+Bhutan,large_city,2032,0.46599999999999997
+Bhutan,large_city,2033,0.46699999999999997
+Bhutan,large_city,2034,0.46799999999999997
+Bhutan,large_city,2035,0.469
+Bhutan,large_city,2036,0.47
+Bhutan,large_city,2037,0.471
+Bhutan,large_city,2038,0.472
+Bhutan,large_city,2039,0.473
+Bhutan,large_city,2040,0.474
+Bhutan,large_city,2041,0.475
+Bhutan,large_city,2042,0.476
+Bhutan,large_city,2043,0.477
+Bhutan,large_city,2044,0.478
+Bhutan,large_city,2045,0.479
+Bhutan,large_city,2046,0.48
+Bhutan,large_city,2047,0.481
+Bhutan,large_city,2048,0.482
+Bhutan,large_city,2049,0.483
+Bhutan,large_city,2050,0.484
+Bhutan,large_city,2051,0.484
+Bhutan,large_city,2052,0.484
+Bhutan,large_city,2053,0.484
+Bhutan,large_city,2054,0.484
+Bhutan,large_city,2055,0.484
+Bhutan,large_city,2056,0.484
+Bhutan,large_city,2057,0.484
+Bhutan,large_city,2058,0.484
+Bhutan,large_city,2059,0.484
+Bhutan,large_city,2060,0.484
+Bhutan,large_city,2061,0.484
+Bhutan,large_city,2062,0.484
+Bhutan,large_city,2063,0.484
+Bhutan,large_city,2064,0.484
+Bhutan,large_city,2065,0.484
+Bhutan,large_city,2066,0.484
+Bhutan,large_city,2067,0.484
+Bhutan,large_city,2068,0.484
+Bhutan,large_city,2069,0.484
+Bhutan,large_city,2070,0.484
+Bhutan,large_city,2071,0.484
+Bhutan,large_city,2072,0.484
+Bhutan,large_city,2073,0.484
+Bhutan,large_city,2074,0.484
+Bhutan,large_city,2075,0.484
+Bhutan,large_city,2076,0.484
+Bhutan,large_city,2077,0.484
+Bhutan,large_city,2078,0.484
+Bhutan,large_city,2079,0.484
+Bhutan,large_city,2080,0.484
+Bhutan,large_city,2081,0.484
+Bhutan,large_city,2082,0.484
+Bhutan,large_city,2083,0.484
+Bhutan,large_city,2084,0.484
+Bhutan,large_city,2085,0.484
+Bhutan,large_city,2086,0.484
+Bhutan,large_city,2087,0.484
+Bhutan,large_city,2088,0.484
+Bhutan,large_city,2089,0.484
+Bhutan,large_city,2090,0.484
+Bhutan,large_city,2091,0.484
+Bhutan,large_city,2092,0.484
+Bhutan,large_city,2093,0.484
+Bhutan,large_city,2094,0.484
+Bhutan,large_city,2095,0.484
+Bhutan,large_city,2096,0.484
+Bhutan,large_city,2097,0.484
+Bhutan,large_city,2098,0.484
+Bhutan,large_city,2099,0.484
+Bhutan,large_city,2100,0.484
+Bhutan,town,2011,0.256
+Bhutan,town,2012,0.2546842105263158
+Bhutan,town,2013,0.2533684210526316
+Bhutan,town,2014,0.25205263157894736
+Bhutan,town,2015,0.25073684210526315
+Bhutan,town,2016,0.24942105263157896
+Bhutan,town,2017,0.24810526315789475
+Bhutan,town,2018,0.24678947368421053
+Bhutan,town,2019,0.24547368421052632
+Bhutan,town,2020,0.2441578947368421
+Bhutan,town,2021,0.24284210526315791
+Bhutan,town,2022,0.2415263157894737
+Bhutan,town,2023,0.24021052631578949
+Bhutan,town,2024,0.23889473684210527
+Bhutan,town,2025,0.23757894736842106
+Bhutan,town,2026,0.23626315789473684
+Bhutan,town,2027,0.23494736842105263
+Bhutan,town,2028,0.23363157894736844
+Bhutan,town,2029,0.23231578947368423
+Bhutan,town,2030,0.231
+Bhutan,town,2031,0.2305
+Bhutan,town,2032,0.23
+Bhutan,town,2033,0.2295
+Bhutan,town,2034,0.229
+Bhutan,town,2035,0.2285
+Bhutan,town,2036,0.228
+Bhutan,town,2037,0.2275
+Bhutan,town,2038,0.227
+Bhutan,town,2039,0.2265
+Bhutan,town,2040,0.226
+Bhutan,town,2041,0.2255
+Bhutan,town,2042,0.225
+Bhutan,town,2043,0.2245
+Bhutan,town,2044,0.224
+Bhutan,town,2045,0.2235
+Bhutan,town,2046,0.223
+Bhutan,town,2047,0.2225
+Bhutan,town,2048,0.222
+Bhutan,town,2049,0.2215
+Bhutan,town,2050,0.221
+Bhutan,town,2051,0.221
+Bhutan,town,2052,0.221
+Bhutan,town,2053,0.221
+Bhutan,town,2054,0.221
+Bhutan,town,2055,0.221
+Bhutan,town,2056,0.221
+Bhutan,town,2057,0.221
+Bhutan,town,2058,0.221
+Bhutan,town,2059,0.221
+Bhutan,town,2060,0.221
+Bhutan,town,2061,0.221
+Bhutan,town,2062,0.221
+Bhutan,town,2063,0.221
+Bhutan,town,2064,0.221
+Bhutan,town,2065,0.221
+Bhutan,town,2066,0.221
+Bhutan,town,2067,0.221
+Bhutan,town,2068,0.221
+Bhutan,town,2069,0.221
+Bhutan,town,2070,0.221
+Bhutan,town,2071,0.221
+Bhutan,town,2072,0.221
+Bhutan,town,2073,0.221
+Bhutan,town,2074,0.221
+Bhutan,town,2075,0.221
+Bhutan,town,2076,0.221
+Bhutan,town,2077,0.221
+Bhutan,town,2078,0.221
+Bhutan,town,2079,0.221
+Bhutan,town,2080,0.221
+Bhutan,town,2081,0.221
+Bhutan,town,2082,0.221
+Bhutan,town,2083,0.221
+Bhutan,town,2084,0.221
+Bhutan,town,2085,0.221
+Bhutan,town,2086,0.221
+Bhutan,town,2087,0.221
+Bhutan,town,2088,0.221
+Bhutan,town,2089,0.221
+Bhutan,town,2090,0.221
+Bhutan,town,2091,0.221
+Bhutan,town,2092,0.221
+Bhutan,town,2093,0.221
+Bhutan,town,2094,0.221
+Bhutan,town,2095,0.221
+Bhutan,town,2096,0.221
+Bhutan,town,2097,0.221
+Bhutan,town,2098,0.221
+Bhutan,town,2099,0.221
+Bhutan,town,2100,0.221
+India,city,2011,0.2309
+India,city,2012,0.22958421052631578
+India,city,2013,0.22826842105263156
+India,city,2014,0.22695263157894735
+India,city,2015,0.22563684210526316
+India,city,2016,0.22432105263157895
+India,city,2017,0.22300526315789473
+India,city,2018,0.22168947368421052
+India,city,2019,0.2203736842105263
+India,city,2020,0.2190578947368421
+India,city,2021,0.2177421052631579
+India,city,2022,0.2164263157894737
+India,city,2023,0.21511052631578947
+India,city,2024,0.21379473684210526
+India,city,2025,0.21247894736842105
+India,city,2026,0.21116315789473683
+India,city,2027,0.20984736842105262
+India,city,2028,0.20853157894736843
+India,city,2029,0.20721578947368421
+India,city,2030,0.2059
+India,city,2031,0.2054
+India,city,2032,0.2049
+India,city,2033,0.2044
+India,city,2034,0.2039
+India,city,2035,0.2034
+India,city,2036,0.2029
+India,city,2037,0.2024
+India,city,2038,0.2019
+India,city,2039,0.2014
+India,city,2040,0.2009
+India,city,2041,0.2004
+India,city,2042,0.1999
+India,city,2043,0.1994
+India,city,2044,0.1989
+India,city,2045,0.1984
+India,city,2046,0.1979
+India,city,2047,0.1974
+India,city,2048,0.1969
+India,city,2049,0.1964
+India,city,2050,0.1959
+India,city,2051,0.1959
+India,city,2052,0.1959
+India,city,2053,0.1959
+India,city,2054,0.1959
+India,city,2055,0.1959
+India,city,2056,0.1959
+India,city,2057,0.1959
+India,city,2058,0.1959
+India,city,2059,0.1959
+India,city,2060,0.1959
+India,city,2061,0.1959
+India,city,2062,0.1959
+India,city,2063,0.1959
+India,city,2064,0.1959
+India,city,2065,0.1959
+India,city,2066,0.1959
+India,city,2067,0.1959
+India,city,2068,0.1959
+India,city,2069,0.1959
+India,city,2070,0.1959
+India,city,2071,0.1959
+India,city,2072,0.1959
+India,city,2073,0.1959
+India,city,2074,0.1959
+India,city,2075,0.1959
+India,city,2076,0.1959
+India,city,2077,0.1959
+India,city,2078,0.1959
+India,city,2079,0.1959
+India,city,2080,0.1959
+India,city,2081,0.1959
+India,city,2082,0.1959
+India,city,2083,0.1959
+India,city,2084,0.1959
+India,city,2085,0.1959
+India,city,2086,0.1959
+India,city,2087,0.1959
+India,city,2088,0.1959
+India,city,2089,0.1959
+India,city,2090,0.1959
+India,city,2091,0.1959
+India,city,2092,0.1959
+India,city,2093,0.1959
+India,city,2094,0.1959
+India,city,2095,0.1959
+India,city,2096,0.1959
+India,city,2097,0.1959
+India,city,2098,0.1959
+India,city,2099,0.1959
+India,city,2100,0.1959
+India,large_city,2011,0.4262
+India,large_city,2012,0.42883157894736845
+India,large_city,2013,0.4314631578947369
+India,large_city,2014,0.4340947368421053
+India,large_city,2015,0.4367263157894737
+India,large_city,2016,0.4393578947368421
+India,large_city,2017,0.44198947368421054
+India,large_city,2018,0.444621052631579
+India,large_city,2019,0.4472526315789474
+India,large_city,2020,0.44988421052631583
+India,large_city,2021,0.4525157894736842
+India,large_city,2022,0.45514736842105263
+India,large_city,2023,0.45777894736842106
+India,large_city,2024,0.4604105263157895
+India,large_city,2025,0.4630421052631579
+India,large_city,2026,0.46567368421052635
+India,large_city,2027,0.4683052631578948
+India,large_city,2028,0.47093684210526315
+India,large_city,2029,0.4735684210526316
+India,large_city,2030,0.4762
+India,large_city,2031,0.4772
+India,large_city,2032,0.4782
+India,large_city,2033,0.4792
+India,large_city,2034,0.4802
+India,large_city,2035,0.4812
+India,large_city,2036,0.4822
+India,large_city,2037,0.4832
+India,large_city,2038,0.4842
+India,large_city,2039,0.4852
+India,large_city,2040,0.4862
+India,large_city,2041,0.4872
+India,large_city,2042,0.4882
+India,large_city,2043,0.4892
+India,large_city,2044,0.4902
+India,large_city,2045,0.4912
+India,large_city,2046,0.4922
+India,large_city,2047,0.4932
+India,large_city,2048,0.49420000000000003
+India,large_city,2049,0.49520000000000003
+India,large_city,2050,0.49620000000000003
+India,large_city,2051,0.49620000000000003
+India,large_city,2052,0.49620000000000003
+India,large_city,2053,0.49620000000000003
+India,large_city,2054,0.49620000000000003
+India,large_city,2055,0.49620000000000003
+India,large_city,2056,0.49620000000000003
+India,large_city,2057,0.49620000000000003
+India,large_city,2058,0.49620000000000003
+India,large_city,2059,0.49620000000000003
+India,large_city,2060,0.49620000000000003
+India,large_city,2061,0.49620000000000003
+India,large_city,2062,0.49620000000000003
+India,large_city,2063,0.49620000000000003
+India,large_city,2064,0.49620000000000003
+India,large_city,2065,0.49620000000000003
+India,large_city,2066,0.49620000000000003
+India,large_city,2067,0.49620000000000003
+India,large_city,2068,0.49620000000000003
+India,large_city,2069,0.49620000000000003
+India,large_city,2070,0.49620000000000003
+India,large_city,2071,0.49620000000000003
+India,large_city,2072,0.49620000000000003
+India,large_city,2073,0.49620000000000003
+India,large_city,2074,0.49620000000000003
+India,large_city,2075,0.49620000000000003
+India,large_city,2076,0.49620000000000003
+India,large_city,2077,0.49620000000000003
+India,large_city,2078,0.49620000000000003
+India,large_city,2079,0.49620000000000003
+India,large_city,2080,0.49620000000000003
+India,large_city,2081,0.49620000000000003
+India,large_city,2082,0.49620000000000003
+India,large_city,2083,0.49620000000000003
+India,large_city,2084,0.49620000000000003
+India,large_city,2085,0.49620000000000003
+India,large_city,2086,0.49620000000000003
+India,large_city,2087,0.49620000000000003
+India,large_city,2088,0.49620000000000003
+India,large_city,2089,0.49620000000000003
+India,large_city,2090,0.49620000000000003
+India,large_city,2091,0.49620000000000003
+India,large_city,2092,0.49620000000000003
+India,large_city,2093,0.49620000000000003
+India,large_city,2094,0.49620000000000003
+India,large_city,2095,0.49620000000000003
+India,large_city,2096,0.49620000000000003
+India,large_city,2097,0.49620000000000003
+India,large_city,2098,0.49620000000000003
+India,large_city,2099,0.49620000000000003
+India,large_city,2100,0.49620000000000003
+India,town,2011,0.3386
+India,town,2012,0.3372842105263158
+India,town,2013,0.3359684210526316
+India,town,2014,0.33465263157894737
+India,town,2015,0.33333684210526315
+India,town,2016,0.33202105263157894
+India,town,2017,0.3307052631578947
+India,town,2018,0.3293894736842105
+India,town,2019,0.3280736842105263
+India,town,2020,0.3267578947368421
+India,town,2021,0.32544210526315787
+India,town,2022,0.3241263157894737
+India,town,2023,0.3228105263157895
+India,town,2024,0.3214947368421053
+India,town,2025,0.32017894736842106
+India,town,2026,0.31886315789473685
+India,town,2027,0.31754736842105263
+India,town,2028,0.3162315789473684
+India,town,2029,0.3149157894736842
+India,town,2030,0.3136
+India,town,2031,0.3131
+India,town,2032,0.3126
+India,town,2033,0.3121
+India,town,2034,0.3116
+India,town,2035,0.3111
+India,town,2036,0.3106
+India,town,2037,0.3101
+India,town,2038,0.3096
+India,town,2039,0.3091
+India,town,2040,0.3086
+India,town,2041,0.3081
+India,town,2042,0.3076
+India,town,2043,0.3071
+India,town,2044,0.3066
+India,town,2045,0.3061
+India,town,2046,0.3056
+India,town,2047,0.3051
+India,town,2048,0.3046
+India,town,2049,0.3041
+India,town,2050,0.3036
+India,town,2051,0.3036
+India,town,2052,0.3036
+India,town,2053,0.3036
+India,town,2054,0.3036
+India,town,2055,0.3036
+India,town,2056,0.3036
+India,town,2057,0.3036
+India,town,2058,0.3036
+India,town,2059,0.3036
+India,town,2060,0.3036
+India,town,2061,0.3036
+India,town,2062,0.3036
+India,town,2063,0.3036
+India,town,2064,0.3036
+India,town,2065,0.3036
+India,town,2066,0.3036
+India,town,2067,0.3036
+India,town,2068,0.3036
+India,town,2069,0.3036
+India,town,2070,0.3036
+India,town,2071,0.3036
+India,town,2072,0.3036
+India,town,2073,0.3036
+India,town,2074,0.3036
+India,town,2075,0.3036
+India,town,2076,0.3036
+India,town,2077,0.3036
+India,town,2078,0.3036
+India,town,2079,0.3036
+India,town,2080,0.3036
+India,town,2081,0.3036
+India,town,2082,0.3036
+India,town,2083,0.3036
+India,town,2084,0.3036
+India,town,2085,0.3036
+India,town,2086,0.3036
+India,town,2087,0.3036
+India,town,2088,0.3036
+India,town,2089,0.3036
+India,town,2090,0.3036
+India,town,2091,0.3036
+India,town,2092,0.3036
+India,town,2093,0.3036
+India,town,2094,0.3036
+India,town,2095,0.3036
+India,town,2096,0.3036
+India,town,2097,0.3036
+India,town,2098,0.3036
+India,town,2099,0.3036
+India,town,2100,0.3036
+Maldives,city,2011,0.14
+Maldives,city,2012,0.1386842105263158
+Maldives,city,2013,0.13736842105263158
+Maldives,city,2014,0.13605263157894737
+Maldives,city,2015,0.13473684210526318
+Maldives,city,2016,0.13342105263157897
+Maldives,city,2017,0.13210526315789475
+Maldives,city,2018,0.13078947368421054
+Maldives,city,2019,0.12947368421052632
+Maldives,city,2020,0.1281578947368421
+Maldives,city,2021,0.12684210526315792
+Maldives,city,2022,0.1255263157894737
+Maldives,city,2023,0.1242105263157895
+Maldives,city,2024,0.12289473684210528
+Maldives,city,2025,0.12157894736842106
+Maldives,city,2026,0.12026315789473686
+Maldives,city,2027,0.11894736842105265
+Maldives,city,2028,0.11763157894736843
+Maldives,city,2029,0.11631578947368423
+Maldives,city,2030,0.11500000000000002
+Maldives,city,2031,0.11450000000000002
+Maldives,city,2032,0.11400000000000002
+Maldives,city,2033,0.11350000000000002
+Maldives,city,2034,0.11300000000000002
+Maldives,city,2035,0.11250000000000002
+Maldives,city,2036,0.11200000000000002
+Maldives,city,2037,0.11150000000000002
+Maldives,city,2038,0.11100000000000002
+Maldives,city,2039,0.11050000000000001
+Maldives,city,2040,0.11000000000000001
+Maldives,city,2041,0.10950000000000001
+Maldives,city,2042,0.10900000000000003
+Maldives,city,2043,0.10850000000000003
+Maldives,city,2044,0.10800000000000003
+Maldives,city,2045,0.10750000000000003
+Maldives,city,2046,0.10700000000000003
+Maldives,city,2047,0.10650000000000003
+Maldives,city,2048,0.10600000000000002
+Maldives,city,2049,0.10550000000000002
+Maldives,city,2050,0.10500000000000002
+Maldives,city,2051,0.10500000000000002
+Maldives,city,2052,0.10500000000000002
+Maldives,city,2053,0.10500000000000002
+Maldives,city,2054,0.10500000000000002
+Maldives,city,2055,0.10500000000000002
+Maldives,city,2056,0.10500000000000002
+Maldives,city,2057,0.10500000000000002
+Maldives,city,2058,0.10500000000000002
+Maldives,city,2059,0.10500000000000002
+Maldives,city,2060,0.10500000000000002
+Maldives,city,2061,0.10500000000000002
+Maldives,city,2062,0.10500000000000002
+Maldives,city,2063,0.10500000000000002
+Maldives,city,2064,0.10500000000000002
+Maldives,city,2065,0.10500000000000002
+Maldives,city,2066,0.10500000000000002
+Maldives,city,2067,0.10500000000000002
+Maldives,city,2068,0.10500000000000002
+Maldives,city,2069,0.10500000000000002
+Maldives,city,2070,0.10500000000000002
+Maldives,city,2071,0.10500000000000002
+Maldives,city,2072,0.10500000000000002
+Maldives,city,2073,0.10500000000000002
+Maldives,city,2074,0.10500000000000002
+Maldives,city,2075,0.10500000000000002
+Maldives,city,2076,0.10500000000000002
+Maldives,city,2077,0.10500000000000002
+Maldives,city,2078,0.10500000000000002
+Maldives,city,2079,0.10500000000000002
+Maldives,city,2080,0.10500000000000002
+Maldives,city,2081,0.10500000000000002
+Maldives,city,2082,0.10500000000000002
+Maldives,city,2083,0.10500000000000002
+Maldives,city,2084,0.10500000000000002
+Maldives,city,2085,0.10500000000000002
+Maldives,city,2086,0.10500000000000002
+Maldives,city,2087,0.10500000000000002
+Maldives,city,2088,0.10500000000000002
+Maldives,city,2089,0.10500000000000002
+Maldives,city,2090,0.10500000000000002
+Maldives,city,2091,0.10500000000000002
+Maldives,city,2092,0.10500000000000002
+Maldives,city,2093,0.10500000000000002
+Maldives,city,2094,0.10500000000000002
+Maldives,city,2095,0.10500000000000002
+Maldives,city,2096,0.10500000000000002
+Maldives,city,2097,0.10500000000000002
+Maldives,city,2098,0.10500000000000002
+Maldives,city,2099,0.10500000000000002
+Maldives,city,2100,0.10500000000000002
+Maldives,large_city,2011,0.474
+Maldives,large_city,2012,0.4766315789473684
+Maldives,large_city,2013,0.47926315789473684
+Maldives,large_city,2014,0.48189473684210526
+Maldives,large_city,2015,0.4845263157894737
+Maldives,large_city,2016,0.4871578947368421
+Maldives,large_city,2017,0.4897894736842105
+Maldives,large_city,2018,0.4924210526315789
+Maldives,large_city,2019,0.49505263157894736
+Maldives,large_city,2020,0.4976842105263158
+Maldives,large_city,2021,0.5003157894736843
+Maldives,large_city,2022,0.5029473684210526
+Maldives,large_city,2023,0.505578947368421
+Maldives,large_city,2024,0.5082105263157894
+Maldives,large_city,2025,0.5108421052631579
+Maldives,large_city,2026,0.5134736842105263
+Maldives,large_city,2027,0.5161052631578947
+Maldives,large_city,2028,0.5187368421052632
+Maldives,large_city,2029,0.5213684210526316
+Maldives,large_city,2030,0.524
+Maldives,large_city,2031,0.525
+Maldives,large_city,2032,0.526
+Maldives,large_city,2033,0.527
+Maldives,large_city,2034,0.528
+Maldives,large_city,2035,0.529
+Maldives,large_city,2036,0.53
+Maldives,large_city,2037,0.531
+Maldives,large_city,2038,0.532
+Maldives,large_city,2039,0.533
+Maldives,large_city,2040,0.534
+Maldives,large_city,2041,0.535
+Maldives,large_city,2042,0.536
+Maldives,large_city,2043,0.537
+Maldives,large_city,2044,0.538
+Maldives,large_city,2045,0.539
+Maldives,large_city,2046,0.54
+Maldives,large_city,2047,0.541
+Maldives,large_city,2048,0.542
+Maldives,large_city,2049,0.543
+Maldives,large_city,2050,0.544
+Maldives,large_city,2051,0.544
+Maldives,large_city,2052,0.544
+Maldives,large_city,2053,0.544
+Maldives,large_city,2054,0.544
+Maldives,large_city,2055,0.544
+Maldives,large_city,2056,0.544
+Maldives,large_city,2057,0.544
+Maldives,large_city,2058,0.544
+Maldives,large_city,2059,0.544
+Maldives,large_city,2060,0.544
+Maldives,large_city,2061,0.544
+Maldives,large_city,2062,0.544
+Maldives,large_city,2063,0.544
+Maldives,large_city,2064,0.544
+Maldives,large_city,2065,0.544
+Maldives,large_city,2066,0.544
+Maldives,large_city,2067,0.544
+Maldives,large_city,2068,0.544
+Maldives,large_city,2069,0.544
+Maldives,large_city,2070,0.544
+Maldives,large_city,2071,0.544
+Maldives,large_city,2072,0.544
+Maldives,large_city,2073,0.544
+Maldives,large_city,2074,0.544
+Maldives,large_city,2075,0.544
+Maldives,large_city,2076,0.544
+Maldives,large_city,2077,0.544
+Maldives,large_city,2078,0.544
+Maldives,large_city,2079,0.544
+Maldives,large_city,2080,0.544
+Maldives,large_city,2081,0.544
+Maldives,large_city,2082,0.544
+Maldives,large_city,2083,0.544
+Maldives,large_city,2084,0.544
+Maldives,large_city,2085,0.544
+Maldives,large_city,2086,0.544
+Maldives,large_city,2087,0.544
+Maldives,large_city,2088,0.544
+Maldives,large_city,2089,0.544
+Maldives,large_city,2090,0.544
+Maldives,large_city,2091,0.544
+Maldives,large_city,2092,0.544
+Maldives,large_city,2093,0.544
+Maldives,large_city,2094,0.544
+Maldives,large_city,2095,0.544
+Maldives,large_city,2096,0.544
+Maldives,large_city,2097,0.544
+Maldives,large_city,2098,0.544
+Maldives,large_city,2099,0.544
+Maldives,large_city,2100,0.544
+Maldives,town,2011,0.386
+Maldives,town,2012,0.3846842105263158
+Maldives,town,2013,0.3833684210526316
+Maldives,town,2014,0.38205263157894737
+Maldives,town,2015,0.38073684210526315
+Maldives,town,2016,0.37942105263157894
+Maldives,town,2017,0.3781052631578947
+Maldives,town,2018,0.3767894736842105
+Maldives,town,2019,0.3754736842105263
+Maldives,town,2020,0.3741578947368421
+Maldives,town,2021,0.37284210526315786
+Maldives,town,2022,0.3715263157894737
+Maldives,town,2023,0.3702105263157895
+Maldives,town,2024,0.3688947368421053
+Maldives,town,2025,0.36757894736842106
+Maldives,town,2026,0.36626315789473685
+Maldives,town,2027,0.36494736842105263
+Maldives,town,2028,0.3636315789473684
+Maldives,town,2029,0.3623157894736842
+Maldives,town,2030,0.361
+Maldives,town,2031,0.3605
+Maldives,town,2032,0.36
+Maldives,town,2033,0.3595
+Maldives,town,2034,0.359
+Maldives,town,2035,0.3585
+Maldives,town,2036,0.358
+Maldives,town,2037,0.3575
+Maldives,town,2038,0.357
+Maldives,town,2039,0.3565
+Maldives,town,2040,0.356
+Maldives,town,2041,0.3555
+Maldives,town,2042,0.355
+Maldives,town,2043,0.3545
+Maldives,town,2044,0.354
+Maldives,town,2045,0.3535
+Maldives,town,2046,0.353
+Maldives,town,2047,0.3525
+Maldives,town,2048,0.352
+Maldives,town,2049,0.3515
+Maldives,town,2050,0.351
+Maldives,town,2051,0.351
+Maldives,town,2052,0.351
+Maldives,town,2053,0.351
+Maldives,town,2054,0.351
+Maldives,town,2055,0.351
+Maldives,town,2056,0.351
+Maldives,town,2057,0.351
+Maldives,town,2058,0.351
+Maldives,town,2059,0.351
+Maldives,town,2060,0.351
+Maldives,town,2061,0.351
+Maldives,town,2062,0.351
+Maldives,town,2063,0.351
+Maldives,town,2064,0.351
+Maldives,town,2065,0.351
+Maldives,town,2066,0.351
+Maldives,town,2067,0.351
+Maldives,town,2068,0.351
+Maldives,town,2069,0.351
+Maldives,town,2070,0.351
+Maldives,town,2071,0.351
+Maldives,town,2072,0.351
+Maldives,town,2073,0.351
+Maldives,town,2074,0.351
+Maldives,town,2075,0.351
+Maldives,town,2076,0.351
+Maldives,town,2077,0.351
+Maldives,town,2078,0.351
+Maldives,town,2079,0.351
+Maldives,town,2080,0.351
+Maldives,town,2081,0.351
+Maldives,town,2082,0.351
+Maldives,town,2083,0.351
+Maldives,town,2084,0.351
+Maldives,town,2085,0.351
+Maldives,town,2086,0.351
+Maldives,town,2087,0.351
+Maldives,town,2088,0.351
+Maldives,town,2089,0.351
+Maldives,town,2090,0.351
+Maldives,town,2091,0.351
+Maldives,town,2092,0.351
+Maldives,town,2093,0.351
+Maldives,town,2094,0.351
+Maldives,town,2095,0.351
+Maldives,town,2096,0.351
+Maldives,town,2097,0.351
+Maldives,town,2098,0.351
+Maldives,town,2099,0.351
+Maldives,town,2100,0.351
+Nepal,city,2011,0.3123
+Nepal,city,2012,0.3109842105263158
+Nepal,city,2013,0.3096684210526316
+Nepal,city,2014,0.3083526315789474
+Nepal,city,2015,0.30703684210526316
+Nepal,city,2016,0.30572105263157895
+Nepal,city,2017,0.30440526315789473
+Nepal,city,2018,0.3030894736842105
+Nepal,city,2019,0.3017736842105263
+Nepal,city,2020,0.3004578947368421
+Nepal,city,2021,0.2991421052631579
+Nepal,city,2022,0.2978263157894737
+Nepal,city,2023,0.2965105263157895
+Nepal,city,2024,0.2951947368421053
+Nepal,city,2025,0.2938789473684211
+Nepal,city,2026,0.29256315789473686
+Nepal,city,2027,0.29124736842105264
+Nepal,city,2028,0.28993157894736843
+Nepal,city,2029,0.2886157894736842
+Nepal,city,2030,0.2873
+Nepal,city,2031,0.2868
+Nepal,city,2032,0.2863
+Nepal,city,2033,0.2858
+Nepal,city,2034,0.2853
+Nepal,city,2035,0.2848
+Nepal,city,2036,0.2843
+Nepal,city,2037,0.2838
+Nepal,city,2038,0.2833
+Nepal,city,2039,0.2828
+Nepal,city,2040,0.2823
+Nepal,city,2041,0.2818
+Nepal,city,2042,0.2813
+Nepal,city,2043,0.2808
+Nepal,city,2044,0.2803
+Nepal,city,2045,0.2798
+Nepal,city,2046,0.2793
+Nepal,city,2047,0.2788
+Nepal,city,2048,0.2783
+Nepal,city,2049,0.2778
+Nepal,city,2050,0.2773
+Nepal,city,2051,0.2773
+Nepal,city,2052,0.2773
+Nepal,city,2053,0.2773
+Nepal,city,2054,0.2773
+Nepal,city,2055,0.2773
+Nepal,city,2056,0.2773
+Nepal,city,2057,0.2773
+Nepal,city,2058,0.2773
+Nepal,city,2059,0.2773
+Nepal,city,2060,0.2773
+Nepal,city,2061,0.2773
+Nepal,city,2062,0.2773
+Nepal,city,2063,0.2773
+Nepal,city,2064,0.2773
+Nepal,city,2065,0.2773
+Nepal,city,2066,0.2773
+Nepal,city,2067,0.2773
+Nepal,city,2068,0.2773
+Nepal,city,2069,0.2773
+Nepal,city,2070,0.2773
+Nepal,city,2071,0.2773
+Nepal,city,2072,0.2773
+Nepal,city,2073,0.2773
+Nepal,city,2074,0.2773
+Nepal,city,2075,0.2773
+Nepal,city,2076,0.2773
+Nepal,city,2077,0.2773
+Nepal,city,2078,0.2773
+Nepal,city,2079,0.2773
+Nepal,city,2080,0.2773
+Nepal,city,2081,0.2773
+Nepal,city,2082,0.2773
+Nepal,city,2083,0.2773
+Nepal,city,2084,0.2773
+Nepal,city,2085,0.2773
+Nepal,city,2086,0.2773
+Nepal,city,2087,0.2773
+Nepal,city,2088,0.2773
+Nepal,city,2089,0.2773
+Nepal,city,2090,0.2773
+Nepal,city,2091,0.2773
+Nepal,city,2092,0.2773
+Nepal,city,2093,0.2773
+Nepal,city,2094,0.2773
+Nepal,city,2095,0.2773
+Nepal,city,2096,0.2773
+Nepal,city,2097,0.2773
+Nepal,city,2098,0.2773
+Nepal,city,2099,0.2773
+Nepal,city,2100,0.2773
+Nepal,large_city,2011,0.4164
+Nepal,large_city,2012,0.4190315789473684
+Nepal,large_city,2013,0.42166315789473685
+Nepal,large_city,2014,0.4242947368421053
+Nepal,large_city,2015,0.42692631578947365
+Nepal,large_city,2016,0.4295578947368421
+Nepal,large_city,2017,0.4321894736842105
+Nepal,large_city,2018,0.43482105263157894
+Nepal,large_city,2019,0.43745263157894737
+Nepal,large_city,2020,0.4400842105263158
+Nepal,large_city,2021,0.4427157894736842
+Nepal,large_city,2022,0.4453473684210526
+Nepal,large_city,2023,0.44797894736842103
+Nepal,large_city,2024,0.45061052631578946
+Nepal,large_city,2025,0.4532421052631579
+Nepal,large_city,2026,0.4558736842105263
+Nepal,large_city,2027,0.45850526315789475
+Nepal,large_city,2028,0.4611368421052631
+Nepal,large_city,2029,0.46376842105263155
+Nepal,large_city,2030,0.4664
+Nepal,large_city,2031,0.4674
+Nepal,large_city,2032,0.4684
+Nepal,large_city,2033,0.4694
+Nepal,large_city,2034,0.4704
+Nepal,large_city,2035,0.4714
+Nepal,large_city,2036,0.4724
+Nepal,large_city,2037,0.4734
+Nepal,large_city,2038,0.4744
+Nepal,large_city,2039,0.4754
+Nepal,large_city,2040,0.4764
+Nepal,large_city,2041,0.4774
+Nepal,large_city,2042,0.4784
+Nepal,large_city,2043,0.4794
+Nepal,large_city,2044,0.4804
+Nepal,large_city,2045,0.4814
+Nepal,large_city,2046,0.4824
+Nepal,large_city,2047,0.4834
+Nepal,large_city,2048,0.4844
+Nepal,large_city,2049,0.4854
+Nepal,large_city,2050,0.4864
+Nepal,large_city,2051,0.4864
+Nepal,large_city,2052,0.4864
+Nepal,large_city,2053,0.4864
+Nepal,large_city,2054,0.4864
+Nepal,large_city,2055,0.4864
+Nepal,large_city,2056,0.4864
+Nepal,large_city,2057,0.4864
+Nepal,large_city,2058,0.4864
+Nepal,large_city,2059,0.4864
+Nepal,large_city,2060,0.4864
+Nepal,large_city,2061,0.4864
+Nepal,large_city,2062,0.4864
+Nepal,large_city,2063,0.4864
+Nepal,large_city,2064,0.4864
+Nepal,large_city,2065,0.4864
+Nepal,large_city,2066,0.4864
+Nepal,large_city,2067,0.4864
+Nepal,large_city,2068,0.4864
+Nepal,large_city,2069,0.4864
+Nepal,large_city,2070,0.4864
+Nepal,large_city,2071,0.4864
+Nepal,large_city,2072,0.4864
+Nepal,large_city,2073,0.4864
+Nepal,large_city,2074,0.4864
+Nepal,large_city,2075,0.4864
+Nepal,large_city,2076,0.4864
+Nepal,large_city,2077,0.4864
+Nepal,large_city,2078,0.4864
+Nepal,large_city,2079,0.4864
+Nepal,large_city,2080,0.4864
+Nepal,large_city,2081,0.4864
+Nepal,large_city,2082,0.4864
+Nepal,large_city,2083,0.4864
+Nepal,large_city,2084,0.4864
+Nepal,large_city,2085,0.4864
+Nepal,large_city,2086,0.4864
+Nepal,large_city,2087,0.4864
+Nepal,large_city,2088,0.4864
+Nepal,large_city,2089,0.4864
+Nepal,large_city,2090,0.4864
+Nepal,large_city,2091,0.4864
+Nepal,large_city,2092,0.4864
+Nepal,large_city,2093,0.4864
+Nepal,large_city,2094,0.4864
+Nepal,large_city,2095,0.4864
+Nepal,large_city,2096,0.4864
+Nepal,large_city,2097,0.4864
+Nepal,large_city,2098,0.4864
+Nepal,large_city,2099,0.4864
+Nepal,large_city,2100,0.4864
+Nepal,town,2011,0.2713
+Nepal,town,2012,0.26998421052631577
+Nepal,town,2013,0.26866842105263156
+Nepal,town,2014,0.26735263157894734
+Nepal,town,2015,0.2660368421052631
+Nepal,town,2016,0.2647210526315789
+Nepal,town,2017,0.2634052631578947
+Nepal,town,2018,0.26208947368421054
+Nepal,town,2019,0.2607736842105263
+Nepal,town,2020,0.2594578947368421
+Nepal,town,2021,0.2581421052631579
+Nepal,town,2022,0.2568263157894737
+Nepal,town,2023,0.25551052631578947
+Nepal,town,2024,0.25419473684210525
+Nepal,town,2025,0.25287894736842104
+Nepal,town,2026,0.2515631578947368
+Nepal,town,2027,0.2502473684210526
+Nepal,town,2028,0.24893157894736842
+Nepal,town,2029,0.2476157894736842
+Nepal,town,2030,0.2463
+Nepal,town,2031,0.2458
+Nepal,town,2032,0.2453
+Nepal,town,2033,0.2448
+Nepal,town,2034,0.2443
+Nepal,town,2035,0.2438
+Nepal,town,2036,0.2433
+Nepal,town,2037,0.2428
+Nepal,town,2038,0.2423
+Nepal,town,2039,0.2418
+Nepal,town,2040,0.2413
+Nepal,town,2041,0.2408
+Nepal,town,2042,0.24029999999999999
+Nepal,town,2043,0.23979999999999999
+Nepal,town,2044,0.23929999999999998
+Nepal,town,2045,0.23879999999999998
+Nepal,town,2046,0.23829999999999998
+Nepal,town,2047,0.23779999999999998
+Nepal,town,2048,0.23729999999999998
+Nepal,town,2049,0.23679999999999998
+Nepal,town,2050,0.23629999999999998
+Nepal,town,2051,0.23629999999999998
+Nepal,town,2052,0.23629999999999998
+Nepal,town,2053,0.23629999999999998
+Nepal,town,2054,0.23629999999999998
+Nepal,town,2055,0.23629999999999998
+Nepal,town,2056,0.23629999999999998
+Nepal,town,2057,0.23629999999999998
+Nepal,town,2058,0.23629999999999998
+Nepal,town,2059,0.23629999999999998
+Nepal,town,2060,0.23629999999999998
+Nepal,town,2061,0.23629999999999998
+Nepal,town,2062,0.23629999999999998
+Nepal,town,2063,0.23629999999999998
+Nepal,town,2064,0.23629999999999998
+Nepal,town,2065,0.23629999999999998
+Nepal,town,2066,0.23629999999999998
+Nepal,town,2067,0.23629999999999998
+Nepal,town,2068,0.23629999999999998
+Nepal,town,2069,0.23629999999999998
+Nepal,town,2070,0.23629999999999998
+Nepal,town,2071,0.23629999999999998
+Nepal,town,2072,0.23629999999999998
+Nepal,town,2073,0.23629999999999998
+Nepal,town,2074,0.23629999999999998
+Nepal,town,2075,0.23629999999999998
+Nepal,town,2076,0.23629999999999998
+Nepal,town,2077,0.23629999999999998
+Nepal,town,2078,0.23629999999999998
+Nepal,town,2079,0.23629999999999998
+Nepal,town,2080,0.23629999999999998
+Nepal,town,2081,0.23629999999999998
+Nepal,town,2082,0.23629999999999998
+Nepal,town,2083,0.23629999999999998
+Nepal,town,2084,0.23629999999999998
+Nepal,town,2085,0.23629999999999998
+Nepal,town,2086,0.23629999999999998
+Nepal,town,2087,0.23629999999999998
+Nepal,town,2088,0.23629999999999998
+Nepal,town,2089,0.23629999999999998
+Nepal,town,2090,0.23629999999999998
+Nepal,town,2091,0.23629999999999998
+Nepal,town,2092,0.23629999999999998
+Nepal,town,2093,0.23629999999999998
+Nepal,town,2094,0.23629999999999998
+Nepal,town,2095,0.23629999999999998
+Nepal,town,2096,0.23629999999999998
+Nepal,town,2097,0.23629999999999998
+Nepal,town,2098,0.23629999999999998
+Nepal,town,2099,0.23629999999999998
+Nepal,town,2100,0.23629999999999998
+Pakistan,city,2011,0.332
+Pakistan,city,2012,0.3306842105263158
+Pakistan,city,2013,0.3293684210526316
+Pakistan,city,2014,0.3280526315789474
+Pakistan,city,2015,0.32673684210526316
+Pakistan,city,2016,0.32542105263157894
+Pakistan,city,2017,0.32410526315789473
+Pakistan,city,2018,0.3227894736842105
+Pakistan,city,2019,0.3214736842105263
+Pakistan,city,2020,0.3201578947368421
+Pakistan,city,2021,0.3188421052631579
+Pakistan,city,2022,0.3175263157894737
+Pakistan,city,2023,0.3162105263157895
+Pakistan,city,2024,0.3148947368421053
+Pakistan,city,2025,0.31357894736842107
+Pakistan,city,2026,0.31226315789473685
+Pakistan,city,2027,0.31094736842105264
+Pakistan,city,2028,0.3096315789473684
+Pakistan,city,2029,0.3083157894736842
+Pakistan,city,2030,0.307
+Pakistan,city,2031,0.3065
+Pakistan,city,2032,0.306
+Pakistan,city,2033,0.3055
+Pakistan,city,2034,0.305
+Pakistan,city,2035,0.3045
+Pakistan,city,2036,0.304
+Pakistan,city,2037,0.3035
+Pakistan,city,2038,0.303
+Pakistan,city,2039,0.3025
+Pakistan,city,2040,0.302
+Pakistan,city,2041,0.3015
+Pakistan,city,2042,0.301
+Pakistan,city,2043,0.3005
+Pakistan,city,2044,0.3
+Pakistan,city,2045,0.2995
+Pakistan,city,2046,0.299
+Pakistan,city,2047,0.2985
+Pakistan,city,2048,0.298
+Pakistan,city,2049,0.2975
+Pakistan,city,2050,0.297
+Pakistan,city,2051,0.297
+Pakistan,city,2052,0.297
+Pakistan,city,2053,0.297
+Pakistan,city,2054,0.297
+Pakistan,city,2055,0.297
+Pakistan,city,2056,0.297
+Pakistan,city,2057,0.297
+Pakistan,city,2058,0.297
+Pakistan,city,2059,0.297
+Pakistan,city,2060,0.297
+Pakistan,city,2061,0.297
+Pakistan,city,2062,0.297
+Pakistan,city,2063,0.297
+Pakistan,city,2064,0.297
+Pakistan,city,2065,0.297
+Pakistan,city,2066,0.297
+Pakistan,city,2067,0.297
+Pakistan,city,2068,0.297
+Pakistan,city,2069,0.297
+Pakistan,city,2070,0.297
+Pakistan,city,2071,0.297
+Pakistan,city,2072,0.297
+Pakistan,city,2073,0.297
+Pakistan,city,2074,0.297
+Pakistan,city,2075,0.297
+Pakistan,city,2076,0.297
+Pakistan,city,2077,0.297
+Pakistan,city,2078,0.297
+Pakistan,city,2079,0.297
+Pakistan,city,2080,0.297
+Pakistan,city,2081,0.297
+Pakistan,city,2082,0.297
+Pakistan,city,2083,0.297
+Pakistan,city,2084,0.297
+Pakistan,city,2085,0.297
+Pakistan,city,2086,0.297
+Pakistan,city,2087,0.297
+Pakistan,city,2088,0.297
+Pakistan,city,2089,0.297
+Pakistan,city,2090,0.297
+Pakistan,city,2091,0.297
+Pakistan,city,2092,0.297
+Pakistan,city,2093,0.297
+Pakistan,city,2094,0.297
+Pakistan,city,2095,0.297
+Pakistan,city,2096,0.297
+Pakistan,city,2097,0.297
+Pakistan,city,2098,0.297
+Pakistan,city,2099,0.297
+Pakistan,city,2100,0.297
+Pakistan,large_city,2011,0.5427
+Pakistan,large_city,2012,0.5453315789473684
+Pakistan,large_city,2013,0.5479631578947368
+Pakistan,large_city,2014,0.5505947368421052
+Pakistan,large_city,2015,0.5532263157894737
+Pakistan,large_city,2016,0.5558578947368421
+Pakistan,large_city,2017,0.5584894736842105
+Pakistan,large_city,2018,0.561121052631579
+Pakistan,large_city,2019,0.5637526315789474
+Pakistan,large_city,2020,0.5663842105263158
+Pakistan,large_city,2021,0.5690157894736843
+Pakistan,large_city,2022,0.5716473684210526
+Pakistan,large_city,2023,0.574278947368421
+Pakistan,large_city,2024,0.5769105263157894
+Pakistan,large_city,2025,0.5795421052631579
+Pakistan,large_city,2026,0.5821736842105263
+Pakistan,large_city,2027,0.5848052631578947
+Pakistan,large_city,2028,0.5874368421052631
+Pakistan,large_city,2029,0.5900684210526316
+Pakistan,large_city,2030,0.5927
+Pakistan,large_city,2031,0.5937
+Pakistan,large_city,2032,0.5947
+Pakistan,large_city,2033,0.5957
+Pakistan,large_city,2034,0.5967
+Pakistan,large_city,2035,0.5977
+Pakistan,large_city,2036,0.5987
+Pakistan,large_city,2037,0.5997
+Pakistan,large_city,2038,0.6007
+Pakistan,large_city,2039,0.6017
+Pakistan,large_city,2040,0.6027
+Pakistan,large_city,2041,0.6037
+Pakistan,large_city,2042,0.6047
+Pakistan,large_city,2043,0.6057
+Pakistan,large_city,2044,0.6067
+Pakistan,large_city,2045,0.6077
+Pakistan,large_city,2046,0.6087
+Pakistan,large_city,2047,0.6097
+Pakistan,large_city,2048,0.6107
+Pakistan,large_city,2049,0.6117
+Pakistan,large_city,2050,0.6127
+Pakistan,large_city,2051,0.6127
+Pakistan,large_city,2052,0.6127
+Pakistan,large_city,2053,0.6127
+Pakistan,large_city,2054,0.6127
+Pakistan,large_city,2055,0.6127
+Pakistan,large_city,2056,0.6127
+Pakistan,large_city,2057,0.6127
+Pakistan,large_city,2058,0.6127
+Pakistan,large_city,2059,0.6127
+Pakistan,large_city,2060,0.6127
+Pakistan,large_city,2061,0.6127
+Pakistan,large_city,2062,0.6127
+Pakistan,large_city,2063,0.6127
+Pakistan,large_city,2064,0.6127
+Pakistan,large_city,2065,0.6127
+Pakistan,large_city,2066,0.6127
+Pakistan,large_city,2067,0.6127
+Pakistan,large_city,2068,0.6127
+Pakistan,large_city,2069,0.6127
+Pakistan,large_city,2070,0.6127
+Pakistan,large_city,2071,0.6127
+Pakistan,large_city,2072,0.6127
+Pakistan,large_city,2073,0.6127
+Pakistan,large_city,2074,0.6127
+Pakistan,large_city,2075,0.6127
+Pakistan,large_city,2076,0.6127
+Pakistan,large_city,2077,0.6127
+Pakistan,large_city,2078,0.6127
+Pakistan,large_city,2079,0.6127
+Pakistan,large_city,2080,0.6127
+Pakistan,large_city,2081,0.6127
+Pakistan,large_city,2082,0.6127
+Pakistan,large_city,2083,0.6127
+Pakistan,large_city,2084,0.6127
+Pakistan,large_city,2085,0.6127
+Pakistan,large_city,2086,0.6127
+Pakistan,large_city,2087,0.6127
+Pakistan,large_city,2088,0.6127
+Pakistan,large_city,2089,0.6127
+Pakistan,large_city,2090,0.6127
+Pakistan,large_city,2091,0.6127
+Pakistan,large_city,2092,0.6127
+Pakistan,large_city,2093,0.6127
+Pakistan,large_city,2094,0.6127
+Pakistan,large_city,2095,0.6127
+Pakistan,large_city,2096,0.6127
+Pakistan,large_city,2097,0.6127
+Pakistan,large_city,2098,0.6127
+Pakistan,large_city,2099,0.6127
+Pakistan,large_city,2100,0.6127
+Pakistan,town,2011,0.1253
+Pakistan,town,2012,0.12398421052631578
+Pakistan,town,2013,0.12266842105263158
+Pakistan,town,2014,0.12135263157894736
+Pakistan,town,2015,0.12003684210526315
+Pakistan,town,2016,0.11872105263157895
+Pakistan,town,2017,0.11740526315789473
+Pakistan,town,2018,0.11608947368421052
+Pakistan,town,2019,0.1147736842105263
+Pakistan,town,2020,0.1134578947368421
+Pakistan,town,2021,0.11214210526315789
+Pakistan,town,2022,0.11082631578947369
+Pakistan,town,2023,0.10951052631578947
+Pakistan,town,2024,0.10819473684210526
+Pakistan,town,2025,0.10687894736842105
+Pakistan,town,2026,0.10556315789473684
+Pakistan,town,2027,0.10424736842105263
+Pakistan,town,2028,0.10293157894736842
+Pakistan,town,2029,0.10161578947368421
+Pakistan,town,2030,0.1003
+Pakistan,town,2031,0.0998
+Pakistan,town,2032,0.0993
+Pakistan,town,2033,0.0988
+Pakistan,town,2034,0.0983
+Pakistan,town,2035,0.0978
+Pakistan,town,2036,0.0973
+Pakistan,town,2037,0.0968
+Pakistan,town,2038,0.0963
+Pakistan,town,2039,0.0958
+Pakistan,town,2040,0.0953
+Pakistan,town,2041,0.0948
+Pakistan,town,2042,0.09430000000000001
+Pakistan,town,2043,0.09380000000000001
+Pakistan,town,2044,0.09330000000000001
+Pakistan,town,2045,0.09280000000000001
+Pakistan,town,2046,0.09230000000000001
+Pakistan,town,2047,0.0918
+Pakistan,town,2048,0.0913
+Pakistan,town,2049,0.0908
+Pakistan,town,2050,0.0903
+Pakistan,town,2051,0.0903
+Pakistan,town,2052,0.0903
+Pakistan,town,2053,0.0903
+Pakistan,town,2054,0.0903
+Pakistan,town,2055,0.0903
+Pakistan,town,2056,0.0903
+Pakistan,town,2057,0.0903
+Pakistan,town,2058,0.0903
+Pakistan,town,2059,0.0903
+Pakistan,town,2060,0.0903
+Pakistan,town,2061,0.0903
+Pakistan,town,2062,0.0903
+Pakistan,town,2063,0.0903
+Pakistan,town,2064,0.0903
+Pakistan,town,2065,0.0903
+Pakistan,town,2066,0.0903
+Pakistan,town,2067,0.0903
+Pakistan,town,2068,0.0903
+Pakistan,town,2069,0.0903
+Pakistan,town,2070,0.0903
+Pakistan,town,2071,0.0903
+Pakistan,town,2072,0.0903
+Pakistan,town,2073,0.0903
+Pakistan,town,2074,0.0903
+Pakistan,town,2075,0.0903
+Pakistan,town,2076,0.0903
+Pakistan,town,2077,0.0903
+Pakistan,town,2078,0.0903
+Pakistan,town,2079,0.0903
+Pakistan,town,2080,0.0903
+Pakistan,town,2081,0.0903
+Pakistan,town,2082,0.0903
+Pakistan,town,2083,0.0903
+Pakistan,town,2084,0.0903
+Pakistan,town,2085,0.0903
+Pakistan,town,2086,0.0903
+Pakistan,town,2087,0.0903
+Pakistan,town,2088,0.0903
+Pakistan,town,2089,0.0903
+Pakistan,town,2090,0.0903
+Pakistan,town,2091,0.0903
+Pakistan,town,2092,0.0903
+Pakistan,town,2093,0.0903
+Pakistan,town,2094,0.0903
+Pakistan,town,2095,0.0903
+Pakistan,town,2096,0.0903
+Pakistan,town,2097,0.0903
+Pakistan,town,2098,0.0903
+Pakistan,town,2099,0.0903
+Pakistan,town,2100,0.0903
+Sri Lanka,city,2011,0.495
+Sri Lanka,city,2012,0.4936842105263158
+Sri Lanka,city,2013,0.49236842105263157
+Sri Lanka,city,2014,0.49105263157894735
+Sri Lanka,city,2015,0.48973684210526314
+Sri Lanka,city,2016,0.4884210526315789
+Sri Lanka,city,2017,0.4871052631578947
+Sri Lanka,city,2018,0.4857894736842105
+Sri Lanka,city,2019,0.4844736842105263
+Sri Lanka,city,2020,0.48315789473684206
+Sri Lanka,city,2021,0.48184210526315785
+Sri Lanka,city,2022,0.4805263157894737
+Sri Lanka,city,2023,0.4792105263157895
+Sri Lanka,city,2024,0.47789473684210526
+Sri Lanka,city,2025,0.47657894736842105
+Sri Lanka,city,2026,0.47526315789473683
+Sri Lanka,city,2027,0.4739473684210526
+Sri Lanka,city,2028,0.4726315789473684
+Sri Lanka,city,2029,0.4713157894736842
+Sri Lanka,city,2030,0.47
+Sri Lanka,city,2031,0.4695
+Sri Lanka,city,2032,0.469
+Sri Lanka,city,2033,0.46849999999999997
+Sri Lanka,city,2034,0.46799999999999997
+Sri Lanka,city,2035,0.46749999999999997
+Sri Lanka,city,2036,0.46699999999999997
+Sri Lanka,city,2037,0.46649999999999997
+Sri Lanka,city,2038,0.46599999999999997
+Sri Lanka,city,2039,0.46549999999999997
+Sri Lanka,city,2040,0.46499999999999997
+Sri Lanka,city,2041,0.46449999999999997
+Sri Lanka,city,2042,0.46399999999999997
+Sri Lanka,city,2043,0.46349999999999997
+Sri Lanka,city,2044,0.46299999999999997
+Sri Lanka,city,2045,0.46249999999999997
+Sri Lanka,city,2046,0.46199999999999997
+Sri Lanka,city,2047,0.46149999999999997
+Sri Lanka,city,2048,0.46099999999999997
+Sri Lanka,city,2049,0.46049999999999996
+Sri Lanka,city,2050,0.45999999999999996
+Sri Lanka,city,2051,0.45999999999999996
+Sri Lanka,city,2052,0.45999999999999996
+Sri Lanka,city,2053,0.45999999999999996
+Sri Lanka,city,2054,0.45999999999999996
+Sri Lanka,city,2055,0.45999999999999996
+Sri Lanka,city,2056,0.45999999999999996
+Sri Lanka,city,2057,0.45999999999999996
+Sri Lanka,city,2058,0.45999999999999996
+Sri Lanka,city,2059,0.45999999999999996
+Sri Lanka,city,2060,0.45999999999999996
+Sri Lanka,city,2061,0.45999999999999996
+Sri Lanka,city,2062,0.45999999999999996
+Sri Lanka,city,2063,0.45999999999999996
+Sri Lanka,city,2064,0.45999999999999996
+Sri Lanka,city,2065,0.45999999999999996
+Sri Lanka,city,2066,0.45999999999999996
+Sri Lanka,city,2067,0.45999999999999996
+Sri Lanka,city,2068,0.45999999999999996
+Sri Lanka,city,2069,0.45999999999999996
+Sri Lanka,city,2070,0.45999999999999996
+Sri Lanka,city,2071,0.45999999999999996
+Sri Lanka,city,2072,0.45999999999999996
+Sri Lanka,city,2073,0.45999999999999996
+Sri Lanka,city,2074,0.45999999999999996
+Sri Lanka,city,2075,0.45999999999999996
+Sri Lanka,city,2076,0.45999999999999996
+Sri Lanka,city,2077,0.45999999999999996
+Sri Lanka,city,2078,0.45999999999999996
+Sri Lanka,city,2079,0.45999999999999996
+Sri Lanka,city,2080,0.45999999999999996
+Sri Lanka,city,2081,0.45999999999999996
+Sri Lanka,city,2082,0.45999999999999996
+Sri Lanka,city,2083,0.45999999999999996
+Sri Lanka,city,2084,0.45999999999999996
+Sri Lanka,city,2085,0.45999999999999996
+Sri Lanka,city,2086,0.45999999999999996
+Sri Lanka,city,2087,0.45999999999999996
+Sri Lanka,city,2088,0.45999999999999996
+Sri Lanka,city,2089,0.45999999999999996
+Sri Lanka,city,2090,0.45999999999999996
+Sri Lanka,city,2091,0.45999999999999996
+Sri Lanka,city,2092,0.45999999999999996
+Sri Lanka,city,2093,0.45999999999999996
+Sri Lanka,city,2094,0.45999999999999996
+Sri Lanka,city,2095,0.45999999999999996
+Sri Lanka,city,2096,0.45999999999999996
+Sri Lanka,city,2097,0.45999999999999996
+Sri Lanka,city,2098,0.45999999999999996
+Sri Lanka,city,2099,0.45999999999999996
+Sri Lanka,city,2100,0.45999999999999996
+Sri Lanka,large_city,2011,0.203
+Sri Lanka,large_city,2012,0.20563157894736844
+Sri Lanka,large_city,2013,0.20826315789473684
+Sri Lanka,large_city,2014,0.21089473684210527
+Sri Lanka,large_city,2015,0.2135263157894737
+Sri Lanka,large_city,2016,0.2161578947368421
+Sri Lanka,large_city,2017,0.21878947368421053
+Sri Lanka,large_city,2018,0.22142105263157896
+Sri Lanka,large_city,2019,0.2240526315789474
+Sri Lanka,large_city,2020,0.2266842105263158
+Sri Lanka,large_city,2021,0.22931578947368422
+Sri Lanka,large_city,2022,0.23194736842105262
+Sri Lanka,large_city,2023,0.23457894736842105
+Sri Lanka,large_city,2024,0.23721052631578948
+Sri Lanka,large_city,2025,0.2398421052631579
+Sri Lanka,large_city,2026,0.2424736842105263
+Sri Lanka,large_city,2027,0.24510526315789474
+Sri Lanka,large_city,2028,0.24773684210526317
+Sri Lanka,large_city,2029,0.2503684210526316
+Sri Lanka,large_city,2030,0.253
+Sri Lanka,large_city,2031,0.254
+Sri Lanka,large_city,2032,0.255
+Sri Lanka,large_city,2033,0.256
+Sri Lanka,large_city,2034,0.257
+Sri Lanka,large_city,2035,0.258
+Sri Lanka,large_city,2036,0.259
+Sri Lanka,large_city,2037,0.26
+Sri Lanka,large_city,2038,0.261
+Sri Lanka,large_city,2039,0.262
+Sri Lanka,large_city,2040,0.263
+Sri Lanka,large_city,2041,0.264
+Sri Lanka,large_city,2042,0.265
+Sri Lanka,large_city,2043,0.266
+Sri Lanka,large_city,2044,0.267
+Sri Lanka,large_city,2045,0.268
+Sri Lanka,large_city,2046,0.269
+Sri Lanka,large_city,2047,0.27
+Sri Lanka,large_city,2048,0.271
+Sri Lanka,large_city,2049,0.272
+Sri Lanka,large_city,2050,0.273
+Sri Lanka,large_city,2051,0.273
+Sri Lanka,large_city,2052,0.273
+Sri Lanka,large_city,2053,0.273
+Sri Lanka,large_city,2054,0.273
+Sri Lanka,large_city,2055,0.273
+Sri Lanka,large_city,2056,0.273
+Sri Lanka,large_city,2057,0.273
+Sri Lanka,large_city,2058,0.273
+Sri Lanka,large_city,2059,0.273
+Sri Lanka,large_city,2060,0.273
+Sri Lanka,large_city,2061,0.273
+Sri Lanka,large_city,2062,0.273
+Sri Lanka,large_city,2063,0.273
+Sri Lanka,large_city,2064,0.273
+Sri Lanka,large_city,2065,0.273
+Sri Lanka,large_city,2066,0.273
+Sri Lanka,large_city,2067,0.273
+Sri Lanka,large_city,2068,0.273
+Sri Lanka,large_city,2069,0.273
+Sri Lanka,large_city,2070,0.273
+Sri Lanka,large_city,2071,0.273
+Sri Lanka,large_city,2072,0.273
+Sri Lanka,large_city,2073,0.273
+Sri Lanka,large_city,2074,0.273
+Sri Lanka,large_city,2075,0.273
+Sri Lanka,large_city,2076,0.273
+Sri Lanka,large_city,2077,0.273
+Sri Lanka,large_city,2078,0.273
+Sri Lanka,large_city,2079,0.273
+Sri Lanka,large_city,2080,0.273
+Sri Lanka,large_city,2081,0.273
+Sri Lanka,large_city,2082,0.273
+Sri Lanka,large_city,2083,0.273
+Sri Lanka,large_city,2084,0.273
+Sri Lanka,large_city,2085,0.273
+Sri Lanka,large_city,2086,0.273
+Sri Lanka,large_city,2087,0.273
+Sri Lanka,large_city,2088,0.273
+Sri Lanka,large_city,2089,0.273
+Sri Lanka,large_city,2090,0.273
+Sri Lanka,large_city,2091,0.273
+Sri Lanka,large_city,2092,0.273
+Sri Lanka,large_city,2093,0.273
+Sri Lanka,large_city,2094,0.273
+Sri Lanka,large_city,2095,0.273
+Sri Lanka,large_city,2096,0.273
+Sri Lanka,large_city,2097,0.273
+Sri Lanka,large_city,2098,0.273
+Sri Lanka,large_city,2099,0.273
+Sri Lanka,large_city,2100,0.273
+Sri Lanka,town,2011,0.302
+Sri Lanka,town,2012,0.3006842105263158
+Sri Lanka,town,2013,0.29936842105263156
+Sri Lanka,town,2014,0.29805263157894735
+Sri Lanka,town,2015,0.29673684210526313
+Sri Lanka,town,2016,0.2954210526315789
+Sri Lanka,town,2017,0.2941052631578947
+Sri Lanka,town,2018,0.2927894736842105
+Sri Lanka,town,2019,0.2914736842105263
+Sri Lanka,town,2020,0.29015789473684206
+Sri Lanka,town,2021,0.2888421052631579
+Sri Lanka,town,2022,0.2875263157894737
+Sri Lanka,town,2023,0.28621052631578947
+Sri Lanka,town,2024,0.28489473684210526
+Sri Lanka,town,2025,0.28357894736842104
+Sri Lanka,town,2026,0.2822631578947368
+Sri Lanka,town,2027,0.2809473684210526
+Sri Lanka,town,2028,0.2796315789473684
+Sri Lanka,town,2029,0.2783157894736842
+Sri Lanka,town,2030,0.27699999999999997
+Sri Lanka,town,2031,0.27649999999999997
+Sri Lanka,town,2032,0.27599999999999997
+Sri Lanka,town,2033,0.27549999999999997
+Sri Lanka,town,2034,0.27499999999999997
+Sri Lanka,town,2035,0.27449999999999997
+Sri Lanka,town,2036,0.27399999999999997
+Sri Lanka,town,2037,0.27349999999999997
+Sri Lanka,town,2038,0.27299999999999996
+Sri Lanka,town,2039,0.27249999999999996
+Sri Lanka,town,2040,0.27199999999999996
+Sri Lanka,town,2041,0.27149999999999996
+Sri Lanka,town,2042,0.27099999999999996
+Sri Lanka,town,2043,0.27049999999999996
+Sri Lanka,town,2044,0.26999999999999996
+Sri Lanka,town,2045,0.26949999999999996
+Sri Lanka,town,2046,0.26899999999999996
+Sri Lanka,town,2047,0.26849999999999996
+Sri Lanka,town,2048,0.26799999999999996
+Sri Lanka,town,2049,0.26749999999999996
+Sri Lanka,town,2050,0.26699999999999996
+Sri Lanka,town,2051,0.26699999999999996
+Sri Lanka,town,2052,0.26699999999999996
+Sri Lanka,town,2053,0.26699999999999996
+Sri Lanka,town,2054,0.26699999999999996
+Sri Lanka,town,2055,0.26699999999999996
+Sri Lanka,town,2056,0.26699999999999996
+Sri Lanka,town,2057,0.26699999999999996
+Sri Lanka,town,2058,0.26699999999999996
+Sri Lanka,town,2059,0.26699999999999996
+Sri Lanka,town,2060,0.26699999999999996
+Sri Lanka,town,2061,0.26699999999999996
+Sri Lanka,town,2062,0.26699999999999996
+Sri Lanka,town,2063,0.26699999999999996
+Sri Lanka,town,2064,0.26699999999999996
+Sri Lanka,town,2065,0.26699999999999996
+Sri Lanka,town,2066,0.26699999999999996
+Sri Lanka,town,2067,0.26699999999999996
+Sri Lanka,town,2068,0.26699999999999996
+Sri Lanka,town,2069,0.26699999999999996
+Sri Lanka,town,2070,0.26699999999999996
+Sri Lanka,town,2071,0.26699999999999996
+Sri Lanka,town,2072,0.26699999999999996
+Sri Lanka,town,2073,0.26699999999999996
+Sri Lanka,town,2074,0.26699999999999996
+Sri Lanka,town,2075,0.26699999999999996
+Sri Lanka,town,2076,0.26699999999999996
+Sri Lanka,town,2077,0.26699999999999996
+Sri Lanka,town,2078,0.26699999999999996
+Sri Lanka,town,2079,0.26699999999999996
+Sri Lanka,town,2080,0.26699999999999996
+Sri Lanka,town,2081,0.26699999999999996
+Sri Lanka,town,2082,0.26699999999999996
+Sri Lanka,town,2083,0.26699999999999996
+Sri Lanka,town,2084,0.26699999999999996
+Sri Lanka,town,2085,0.26699999999999996
+Sri Lanka,town,2086,0.26699999999999996
+Sri Lanka,town,2087,0.26699999999999996
+Sri Lanka,town,2088,0.26699999999999996
+Sri Lanka,town,2089,0.26699999999999996
+Sri Lanka,town,2090,0.26699999999999996
+Sri Lanka,town,2091,0.26699999999999996
+Sri Lanka,town,2092,0.26699999999999996
+Sri Lanka,town,2093,0.26699999999999996
+Sri Lanka,town,2094,0.26699999999999996
+Sri Lanka,town,2095,0.26699999999999996
+Sri Lanka,town,2096,0.26699999999999996
+Sri Lanka,town,2097,0.26699999999999996
+Sri Lanka,town,2098,0.26699999999999996
+Sri Lanka,town,2099,0.26699999999999996
+Sri Lanka,town,2100,0.26699999999999996

@@ -5,7 +5,7 @@ This module produces passenger trip data which includes:
     - trip share
     - trip rate (projections for each SSP)
     - daily travel mode share trajcetories
-    - long distance travel mode share trajcetories
+
 
 """
 
@@ -18,18 +18,28 @@ import numpy as np
 
 # Load the spreadsheet model
 demand_model = pd.read_excel(
-    "demand_spreadsheet_model.xlsx", sheet_name="India"
+    "demand_spreadsheet_model_up.xlsx", sheet_name="Sheet1"
 )
 
-# # Select trip distance to convert to genno
-trip_dist = (
-    demand_model[["trip_dist", "Typical distance"]]
+# # Select trip distance for commute and convert to genno
+trip_dist_c = (
+    demand_model[["Country", "trip_dist", "Typical_distance_c"]]
     .drop_duplicates()
-    .rename(columns={"Typical distance": "value"})
+    .rename(columns={"Typical_distance_c": "value", "Country": "n"})
 )
-trip_dist["y"] = 2011
+trip_dist_c["y"] = 2011
 
-data_2050 = pd.DataFrame(
+# # Select trip distance for non-commute and convert to genno
+trip_dist_nc = (
+    demand_model[["Country", "trip_dist", "Typical_dist_nc"]]
+    .drop_duplicates()
+    .rename(columns={"Typical_dist_nc": "value", "Country": "n"})
+)
+trip_dist_nc["y"] = 2011
+
+## Define typical distance for future
+# commute
+data_2050_c = pd.DataFrame(
     {
         "trip_dist": [
             "No_travel",
@@ -45,34 +55,91 @@ data_2050 = pd.DataFrame(
         "y": [2050, 2050, 2050, 2050, 2050, 2050, 2050, 2050],
     }
 )
+# non-commute
+data_2050_nc = pd.DataFrame(
+    {
+        "trip_dist": [
+            "No_travel",
+            "00_01",
+            "02_05",
+            "06_10",
+            "11_20",
+            "21_30",
+            "31_50",
+            "51+",
+        ],
+        "value": [0, 1, 4, 9.5, 18, 27, 48, 100],
+        "y": [2050, 2050, 2050, 2050, 2050, 2050, 2050, 2050],
+    }
+)
+countries = [
+    "India",
+    "Pakistan",
+    "Bangladesh",
+    "Sri Lanka",
+    "Afghanistan",
+    "Bhutan",
+    "Nepal",
+    "Maldives",
+]
+
+data_2050_c = pd.merge(
+    pd.DataFrame({"n": countries}), data_2050_c, how="cross"
+)
+
+data_2050_nc = pd.merge(
+    pd.DataFrame({"n": countries}), data_2050_nc, how="cross"
+)
 
 # Concatenate the two DataFrames
-trip_dist = pd.concat([trip_dist, data_2050], ignore_index=True)
+trip_dist_c = pd.concat([trip_dist_c, data_2050_c], ignore_index=True)
+trip_dist_nc = pd.concat([trip_dist_nc, data_2050_nc], ignore_index=True)
+
 
 new_rows = pd.DataFrame(
-    [(np.nan, year, 0) for year in list(range(2051, 2101))],
-    columns=["trip_dist", "y", "value"],
+    [(np.nan, np.nan, year, 0) for year in list(range(2051, 2101))],
+    columns=["n", "trip_dist", "y", "value"],
 )
-trip_dist = Quantity(
-    pd.concat([trip_dist, new_rows], ignore_index=True).set_index(
-        ["trip_dist", "y"]
+
+trip_dist_c = Quantity(
+    pd.concat([trip_dist_c, new_rows], ignore_index=True).set_index(
+        ["n", "trip_dist", "y"]
     )["value"]
 )
 
-trip_dist = trip_dist.ffill("y")
-trip_dist = computations.interpolate(
-    trip_dist, dict(y=list(range(2011, 2101)))
+trip_dist_nc = Quantity(
+    pd.concat([trip_dist_nc, new_rows], ignore_index=True).set_index(
+        ["n", "trip_dist", "y"]
+    )["value"]
 )
-computations.write_report(trip_dist, Path("trip_distance.csv"))
+
+trip_dist_c = trip_dist_c.ffill("y")
+
+trip_dist_c = computations.interpolate(
+    trip_dist_c, dict(y=list(range(2011, 2101)))
+)
+
+trip_dist_nc = trip_dist_nc.ffill("y")
+trip_dist_nc = computations.interpolate(
+    trip_dist_nc, dict(y=list(range(2011, 2101)))
+)
+
+
+computations.write_report(trip_dist_c, Path("trip_distance_c.csv"))
+computations.write_report(trip_dist_nc, Path("trip_distance_nc.csv"))
 
 
 # # Select trip share for each area type to convert to genno
 trip_share = demand_model[["area_type", "trip_dist", "trip_share"]]
-trip_share = trip_share.rename(columns={"trip_share": "value"})
+trip_share = trip_share.rename(
+    columns={"trip_share": "value"}
+).drop_duplicates()
 trip_share = trip_share.to_csv(index=False, lineterminator="\n")
 trip_share = trip_share.replace(",", ", ")
 
-data_info = data_info = """# Trip share for each area type and trip distance catgeory
+data_info = (
+    data_info
+) = """# Trip share for each area type and trip distance catgeory
 #
 # Calculated values from Indian Census 2011
 #
@@ -84,11 +151,11 @@ file_path.write_text(trip_share)
 
 
 def Trip_rate(k) -> Quantity:
-    # select trip rate from demand model for each distance category and area type
+    # select commute trip rate from demand model for each distance category and area type
     trip_rate = demand_model[
-        ["trip_dist", "area_type", "trip_rate_adjusted"]
+        ["trip_dist", "area_type", "trip_rate_adjusted_c"]
     ].drop_duplicates()
-    trip_rate = trip_rate.rename(columns={"trip_rate_adjusted": "value"})
+    trip_rate = trip_rate.rename(columns={"trip_rate_adjusted_c": "value"})
     # add 'y' dimension
     trip_rate["y"] = 2011
 
@@ -177,9 +244,7 @@ def Trip_rate(k) -> Quantity:
     )
 
     # reshape dataframe
-    new_df = trip_rate[
-        ["trip_dist", "area_type", "2030", "2050", "2100", "n"]
-    ]
+    new_df = trip_rate[["trip_dist", "area_type", "2030", "2050", "2100", "n"]]
     new_df = pd.melt(
         new_df,
         id_vars=["trip_dist", "area_type", "n"],
@@ -199,10 +264,16 @@ def Trip_rate(k) -> Quantity:
 
     # interpolate values
     years_int = list(range(2011, 2101))
-    trip_rate = computations.interpolate(trip_rate, dict(y=years_int))
+    trip_rate_c = computations.interpolate(trip_rate, dict(y=years_int))
+
+    # compute non-commute trip rate
+    # - Commute accounts for 28.74%- find total passenger distance in km (daily)
+    trip_rate_nc = trip_rate_c / 0.32
 
     # save as csv file
-    computations.write_report(trip_rate, Path(f"trip_rate_{k}.csv"))
+    computations.write_report(trip_rate_c, Path(f"trip_rate_c_{k}.csv"))
+    computations.write_report(trip_rate_nc, Path(f"trip_rate_nc_{k}.csv"))
+
     return trip_rate
 
 
@@ -259,14 +330,15 @@ def Mode_shares(k, m) -> Quantity:
 
     # Define log(GDP_cap)
     log_GDP_cap = np.log(gdp_cap(k))
+
     log_GDP_cap = computations.index_to(log_GDP_cap, dim_or_selector="y")
+    # Countries without rail
+    no_rail_countries = ["Afghanistan", "Bhutan", "Maldives", "Nepal"]
 
     # Define a monotonically decreasing fucntion between NMT share and GDP per cap
     # decay rate controls slope of the curve
     def nmt_share_func(x, decay_rate):
-        return Quantity(
-            np.exp(-decay_rate * x) / np.exp(-decay_rate * x[0])
-        )
+        return Quantity(np.exp(-decay_rate * x) / np.exp(-decay_rate * x[0]))
 
     # Constant function for IPT
     def ipt_share_func(x):
@@ -276,9 +348,32 @@ def Mode_shares(k, m) -> Quantity:
         # Monotonically increasing function
         return np.exp(rate * x) / np.exp(rate * x[0])
 
+    # def rail_share_func(x, rate):
+    #     if log_GDP_cap.index.get_level_values("n").isin(no_rail_countries):
+
+    #         else
+    #     # Monotonically increasing function
+    #     return np.exp(rate * x) / np.exp(rate * x[0])
+
     def rail_share_func(x, rate):
-        # Monotonically increasing function
-        return np.exp(rate * x) / np.exp(rate * x[0])
+        """
+        Monotonically increasing function for rail share.
+        Returns 1 for countries without rail, normal exponential growth for others.
+        """
+        no_rail_countries = ["Afghanistan", "Bhutan", "Maldives", "Nepal"]
+        y = pd.Series(index=x.index, dtype=float)
+
+        for n in x.index.get_level_values("n").unique():
+            mask = x.index.get_level_values("n") == n
+            if n in no_rail_countries:
+                y[mask] = 1.0  # fixed value for no-rail countries
+            else:
+                x_n = x[mask]
+                y[mask] = np.exp(rate * x_n) / np.exp(
+                    rate * x_n.iloc[0]
+                )  # normal growth
+
+        return Quantity(y)
 
     # Function that defined growth of LDVs
     def ldv_share_func(x, rate):
@@ -340,14 +435,39 @@ def Mode_shares(k, m) -> Quantity:
     tw = computations.index_to(tw, dim_or_selector="y")
     ipt = computations.index_to(ipt, dim_or_selector="y")
 
+    # List of countries without rail
+    no_rail_countries = ["Afghanistan", "Bhutan", "Maldives", "Nepal"]
+
+    # Create mask
+    mask_no_rail = ldv.index.get_level_values("n").isin(no_rail_countries)
+
+    # Initialize total_share as same shape
+    total_share = pd.Series(index=ldv.index, dtype=float)
+
+    # For countries with rail
+    total_share[~mask_no_rail] = (ldv + bus + rail + nmt + ipt)[
+        ~mask_no_rail
+    ] / 5
+
+    # For countries without rail
+    total_share[mask_no_rail] = (ldv + bus + nmt + ipt)[mask_no_rail] / 4
+
+    total_share = Quantity((total_share.reset_index()).set_index(["n", "y"]))
     # Adjust mode shares to avoid excessive PDT due to mode shares
     # Tw not included to avoid shifting of inflection point
-    total_share = (ldv + bus + rail + nmt + ipt) / 5
+    # total_share = (ldv + bus + rail + nmt + ipt) / 5
     ldv /= total_share
     nmt /= total_share
     bus /= total_share
     rail /= total_share
     ipt /= total_share
+
+    computations.write_report(ldv, Path(f"ldv_{m}_{k}.csv"))
+    computations.write_report(bus, Path(f"bus_{m}_{k}.csv"))
+    computations.write_report(tw, Path(f"tw_{m}_{k}.csv"))
+    computations.write_report(rail, Path(f"rail_{m}_{k}.csv"))
+    computations.write_report(ipt, Path(f"ipt_{m}_{k}.csv"))
+    computations.write_report(nmt, Path(f"nmt_{m}_{k}.csv"))
 
     modes = {}
     mode_share = Key("mode_share", ["mode", "y", "n"])
@@ -355,10 +475,10 @@ def Mode_shares(k, m) -> Quantity:
     # Multiply mode share growth with demand_model
 
     for i in file_list:
-        modes[i] = demand_model[["area_type", "trip_dist", f"{i}"]]
-        modes[i] = modes[i].rename(columns={f"{i}": "value"})
+        modes[i] = demand_model[["Country", "area_type", "trip_dist", f"{i}"]]
+        modes[i] = modes[i].rename(columns={f"{i}": "value", "Country": "n"})
         modes[i] = Quantity(
-            modes[i].set_index(["area_type", "trip_dist"])["value"]
+            modes[i].set_index(["n", "area_type", "trip_dist"])["value"]
         )
         for mode in [
             "ldv",
@@ -376,119 +496,3 @@ def Mode_shares(k, m) -> Quantity:
         mode_share = computations.concat(mode_share, modes[i])
 
     return mode_share
-
-
-# A function that defined mode share trajcetories for long distance travel
-def Long_dist_mode(k, m) -> Quantity:
-    # Define log(GDP_cap)
-    log_GDP_cap = np.log(gdp_cap(2))
-    log_GDP_cap = computations.index_to(log_GDP_cap, dim_or_selector="y")
-
-    # Function that defined growth of LDVs
-    def ldv_share_func(x, ldv_rate):
-        return np.exp(ldv_rate * x) / np.exp(ldv_rate * x[0])
-
-    def rail_share_func(x, rail__rate):
-        return Quantity(
-            np.exp(-rail__rate * x) / np.exp(-rail__rate * x[0])
-        )
-
-    # Constant function for IPT
-    def bus_share_func(x):
-        return x / x
-
-    if m == 1:  # BaU mode share
-        ldv_rate = 1.5
-        rail_rate = 0.3
-    elif m == 2:  # Car-oriented future
-        ldv_rate = 2.5
-        rail_rate = 0.5
-    elif m == 3:  # Sustainable future
-        ldv_rate = 0.9
-        rail_rate = -1
-
-    ldv_share = ldv_share_func(log_GDP_cap, ldv_rate)
-    rail_share = rail_share_func(log_GDP_cap, rail_rate)
-    bus_share = bus_share_func(log_GDP_cap)
-
-    # Load the spreadsheet model
-    long_dist_data = pd.read_excel(
-        "demand_spreadsheet_model.xlsx", sheet_name="long_dist"
-    )
-    long_dist_data = Quantity(
-        long_dist_data.set_index(["n", "mode"])["value"]
-    )
-    # calculate total pkm for 2011
-    long_dist_travel = computations.group_sum(
-        group=["n"], sum="mode", qty=long_dist_data
-    )
-    # save as csv
-    # Long distance passenger kilometers in billion
-    # BAU assumption: bus-84% and ldv-16% of road
-    computations.write_report(long_dist_travel, "long_dist_pkm.csv")
-    # Calculate mode share in 2011
-    long_dist_data = long_dist_data / computations.group_sum(
-        group=["n"], sum="mode", qty=long_dist_data
-    )
-
-    ldv_share = computations.mul(
-        ldv_share.rename("value"),
-        long_dist_data.iloc[
-            long_dist_data.index.get_level_values("mode").isin(
-                ["ldv_share"]
-            )
-        ],
-    )
-
-    bus_share = computations.mul(
-        bus_share.rename("value"),
-        long_dist_data.iloc[
-            long_dist_data.index.get_level_values("mode").isin(
-                ["bus_share"]
-            )
-        ],
-    )
-
-    rail_share = computations.mul(
-        rail_share.rename("value"),
-        long_dist_data.iloc[
-            long_dist_data.index.get_level_values("mode").isin(
-                ["rail_share"]
-            )
-        ],
-    )
-
-    total_share = (
-        ldv_share.drop("mode")
-        + rail_share.drop("mode")
-        + bus_share.drop("mode")
-    )
-
-    # Adjust shares so that sum is 1
-    ldv_share /= total_share
-    bus_share /= total_share
-    rail_share /= total_share
-
-    # account for modes with no contribution in long distance
-    # this is needed for later steps
-    years = list(range(2011, 2021)) + list(range(2025, 2101, 5))
-
-    modes_un = Quantity(
-        pd.DataFrame({"y": years, "value": [0] * len(years)}).set_index(
-            ["y"]
-        )["value"]
-    )
-
-    modes_un = computations.mul(
-        modes_un,
-        long_dist_data.iloc[
-            long_dist_data.index.get_level_values("mode").isin(
-                ["nmt_share", "ipt_share", "tw_share"]
-            )
-        ],
-    )
-
-    modes = computations.concat(ldv_share, rail_share, bus_share, modes_un)
-    computations.write_report(modes, f"long_dist_modes_{k}_{m}.csv")
-
-    return modes
