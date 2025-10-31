@@ -75,7 +75,9 @@ def AV(i) -> Quantity:
     av = phen_setting["AV"].drop("trip_dist") + 1
     occ_av = 1.5  # assumtpion
     ldv_share = av["vdt"] * occ_av  # calculate pdt
-    ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(ldv_share)})
+    ldv_share = ldv_share.expand_dims(
+        parameter={"ldv_share": len(ldv_share)}
+    )
     av = computations.concat(av, ldv_share)
     return av
 
@@ -115,7 +117,9 @@ def HSR(i, j, m) -> Quantity:
         & (x.index.get_level_values("trip_dist").isin(["31_50", "51+"]))
     ]
 
-    long_dist_rail_share = long_dist_rail / long_dist_pdt.xs(2011, level="y")
+    long_dist_rail_share = long_dist_rail / long_dist_pdt.xs(
+        2011, level="y"
+    )
 
     # Country-specific 2050 target shares (applied to both trip distances)
     countries = [
@@ -181,7 +185,9 @@ def HSR(i, j, m) -> Quantity:
 
     other_modes_share = other_modes / other_modes_pdt
 
-    other_modes_total = (long_dist_pdt - hsr.drop("mode")) * other_modes_share
+    other_modes_total = (
+        long_dist_pdt - hsr.drop("mode")
+    ) * other_modes_share
 
     hsr = computations.concat(hsr, other_modes_total)
 
@@ -203,7 +209,9 @@ def NMT(i) -> Quantity:
     # find increase in share of nmt due to mode switch
     nmt_share = 3 - (nmt["bus_share"] + nmt["tw_share"])
     # Expand dims to include parameter
-    nmt_share = nmt_share.expand_dims(parameter={"nmt_share": len(nmt_share)})
+    nmt_share = nmt_share.expand_dims(
+        parameter={"nmt_share": len(nmt_share)}
+    )
     # Concat
     nmt = computations.concat(nmt, nmt_share)
     # Expand dimensions to include trip distance
@@ -238,7 +246,9 @@ def PT(i) -> Quantity:
     bus_share = 1 + computations.group_sum(
         bus_share, group=["area_type", "y"], sum="parameter"
     )
-    bus_share = bus_share.expand_dims(parameter={"bus_share": len(bus_share)})
+    bus_share = bus_share.expand_dims(
+        parameter={"bus_share": len(bus_share)}
+    )
     bus_share = bus_share[bus_share.index.get_level_values("y") > 2030]
 
     pt = computations.concat(pt, bus_share)
@@ -348,7 +358,9 @@ def RH(i) -> Quantity:
     occ = ldv_share / (rh_vdt + (ldv_pdt / occ_ldv))
     # Expand dims to concat
     occ = occ.expand_dims(parameter={"ldv_occ": len(occ)})
-    ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(ldv_share)})
+    ldv_share = ldv_share.expand_dims(
+        parameter={"ldv_share": len(ldv_share)}
+    )
     rh = computations.concat(rh, ldv_share, occ)
     return rh
 
@@ -446,7 +458,9 @@ def RS(i) -> Quantity:
     occ = ldv_share / (rs_vdt + (ldv_pdt / occ_ldv))
     # Expand dims to concat
     occ = occ.expand_dims(parameter={"ldv_occ": len(occ)})
-    ldv_share = ldv_share.expand_dims(parameter={"ldv_share": len(ldv_share)})
+    ldv_share = ldv_share.expand_dims(
+        parameter={"ldv_share": len(ldv_share)}
+    )
     rs = computations.concat(rs, ldv_share, occ)
     return rs
 
@@ -540,11 +554,19 @@ for m in range(1, 4):
 
                 y = value.get("pdt", 1.0)
                 # Trip rate; impacts total PDT
-                trip_rate = value.get("trip_rate", 1.0)  # Non-default for ELF
+                trip_rate = value.get(
+                    "trip_rate", 1.0
+                )  # Non-default for ELF
                 # Adjust LDV, NMT, and PT shares
-                ldv_share = value.get("ldv_share", 1.0)  # Non-default for RH
-                nmt_share = value.get("nmt_share", 1.0)  # Non-default for TODU
-                bus_share = value.get("bus_share", 1.0)  # Non-default for RH
+                ldv_share = value.get(
+                    "ldv_share", 1.0
+                )  # Non-default for RH
+                nmt_share = value.get(
+                    "nmt_share", 1.0
+                )  # Non-default for TODU
+                bus_share = value.get(
+                    "bus_share", 1.0
+                )  # Non-default for RH
                 ldv_occ = value.get("ldv_occ", 2.1)
                 tw_share = value.get(
                     "tw_share", 1.0
@@ -552,7 +574,9 @@ for m in range(1, 4):
                 # NB not currently used
                 # Non-default for RS, RH
                 ev_share = value.get("ev_share", 1)  # Non-default for ENV
-                ldv_own = value.get("ldv_own", 1)  # non-default for HSL, TODU
+                ldv_own = value.get(
+                    "ldv_own", 1
+                )  # non-default for HSL, TODU
 
                 if phen_id in ["URB", "TODU"]:
                     # Phenomena where the `pdt` value has multiplicative effect
@@ -591,8 +615,8 @@ for m in range(1, 4):
 
             return total_pdt
 
-        # scen_info(NP, j, m)
-        # scen_info(BP, j, m)
-        # scen_info(TOD, j, m)
+        scen_info(NP, j, m)
+        scen_info(BP, j, m)
+        scen_info(TOD, j, m)
         scen_info(TECH, j, m)
-    # scen_info(Base, j, m)
+        scen_info(Base, j, m)

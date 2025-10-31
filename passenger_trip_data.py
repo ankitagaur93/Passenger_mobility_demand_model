@@ -244,7 +244,9 @@ def Trip_rate(k) -> Quantity:
     )
 
     # reshape dataframe
-    new_df = trip_rate[["trip_dist", "area_type", "2030", "2050", "2100", "n"]]
+    new_df = trip_rate[
+        ["trip_dist", "area_type", "2030", "2050", "2100", "n"]
+    ]
     new_df = pd.melt(
         new_df,
         id_vars=["trip_dist", "area_type", "n"],
@@ -338,7 +340,9 @@ def Mode_shares(k, m) -> Quantity:
     # Define a monotonically decreasing fucntion between NMT share and GDP per cap
     # decay rate controls slope of the curve
     def nmt_share_func(x, decay_rate):
-        return Quantity(np.exp(-decay_rate * x) / np.exp(-decay_rate * x[0]))
+        return Quantity(
+            np.exp(-decay_rate * x) / np.exp(-decay_rate * x[0])
+        )
 
     # Constant function for IPT
     def ipt_share_func(x):
@@ -347,13 +351,6 @@ def Mode_shares(k, m) -> Quantity:
     def bus_share_func(x, rate):
         # Monotonically increasing function
         return np.exp(rate * x) / np.exp(rate * x[0])
-
-    # def rail_share_func(x, rate):
-    #     if log_GDP_cap.index.get_level_values("n").isin(no_rail_countries):
-
-    #         else
-    #     # Monotonically increasing function
-    #     return np.exp(rate * x) / np.exp(rate * x[0])
 
     def rail_share_func(x, rate):
         """
@@ -452,7 +449,9 @@ def Mode_shares(k, m) -> Quantity:
     # For countries without rail
     total_share[mask_no_rail] = (ldv + bus + nmt + ipt)[mask_no_rail] / 4
 
-    total_share = Quantity((total_share.reset_index()).set_index(["n", "y"]))
+    total_share = Quantity(
+        (total_share.reset_index()).set_index(["n", "y"])
+    )
     # Adjust mode shares to avoid excessive PDT due to mode shares
     # Tw not included to avoid shifting of inflection point
     # total_share = (ldv + bus + rail + nmt + ipt) / 5
@@ -475,8 +474,12 @@ def Mode_shares(k, m) -> Quantity:
     # Multiply mode share growth with demand_model
 
     for i in file_list:
-        modes[i] = demand_model[["Country", "area_type", "trip_dist", f"{i}"]]
-        modes[i] = modes[i].rename(columns={f"{i}": "value", "Country": "n"})
+        modes[i] = demand_model[
+            ["Country", "area_type", "trip_dist", f"{i}"]
+        ]
+        modes[i] = modes[i].rename(
+            columns={f"{i}": "value", "Country": "n"}
+        )
         modes[i] = Quantity(
             modes[i].set_index(["n", "area_type", "trip_dist"])["value"]
         )
